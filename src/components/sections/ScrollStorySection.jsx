@@ -1,0 +1,258 @@
+import { useRef, useState } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Container from "../ui/Container";
+
+gsap.registerPlugin(ScrollTrigger, useGSAP);
+
+function ScrollStorySection({ content }) {
+  const rootRef = useRef(null);
+  const activeIndexRef = useRef(0);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const steps = content.steps;
+  const activeStep = steps[activeIndex] ?? steps[0];
+  const total = steps.length;
+
+  useGSAP(
+    () => {
+      activeIndexRef.current = 0;
+      setActiveIndex(0);
+
+      const matchMedia = gsap.matchMedia();
+
+      matchMedia.add(
+        "(min-width: 768px) and (prefers-reduced-motion: no-preference)",
+        () => {
+          const images = gsap.utils.toArray(".scroll-story-image");
+          const progressFill = rootRef.current?.querySelector(
+            ".scroll-story-progress-fill",
+          );
+
+          if (images.length < 2 || !progressFill) {
+            return undefined;
+          }
+
+          gsap.set(images, {
+            autoAlpha: 0,
+            scale: 1.06,
+            transformOrigin: "center center",
+          });
+          gsap.set(images[0], { autoAlpha: 1, scale: 1.02 });
+          gsap.set(progressFill, {
+            scaleX: 0,
+            transformOrigin: "left center",
+          });
+
+          const timeline = gsap.timeline({
+            defaults: { ease: "none" },
+            scrollTrigger: {
+              trigger: rootRef.current,
+              start: "top top",
+              end: () => `+=${window.innerHeight * (total - 1)}`,
+              pin: true,
+              scrub: 1,
+              anticipatePin: 1,
+              invalidateOnRefresh: true,
+              refreshPriority: 1,
+              onUpdate: (self) => {
+                const nextIndex = Math.min(
+                  total - 1,
+                  Math.floor(self.progress * total),
+                );
+
+                gsap.set(progressFill, { scaleX: self.progress });
+
+                if (nextIndex !== activeIndexRef.current) {
+                  activeIndexRef.current = nextIndex;
+                  setActiveIndex(nextIndex);
+                }
+              },
+            },
+          });
+
+          images.forEach((image, index) => {
+            if (index === 0) {
+              return;
+            }
+
+            const position = index - 1;
+
+            timeline
+              .to(
+                images[index - 1],
+                {
+                  autoAlpha: 0,
+                  scale: 1,
+                  duration: 0.9,
+                },
+                position,
+              )
+              .to(
+                image,
+                {
+                  autoAlpha: 1,
+                  scale: 1.02,
+                  duration: 0.9,
+                },
+                position,
+              );
+          });
+
+          timeline.to(
+            images[total - 1],
+            {
+              scale: 1.06,
+              duration: 0.75,
+            },
+            total - 1,
+          );
+
+          return undefined;
+        },
+      );
+
+      return () => matchMedia.revert();
+    },
+    { dependencies: [content], revertOnUpdate: true, scope: rootRef },
+  );
+
+  return (
+    <>
+      <section
+        className="scroll-story-fallback relative z-0 bg-[#070605] py-16 sm:py-24"
+        id="scroll-story"
+      >
+        <Container>
+          <div className="mb-9 max-w-3xl">
+            <p className="mb-4 text-sm font-medium uppercase text-[#C8A45D]">
+              {content.progressLabel} 01 / {String(total).padStart(2, "0")}
+            </p>
+            <h2 className="font-display text-5xl font-normal leading-none text-[#F7F1E7] sm:text-6xl">
+              {content.title}
+            </h2>
+            <p className="mt-5 text-base leading-8 text-[#D8C3A5] sm:text-lg">
+              {content.subtitle}
+            </p>
+          </div>
+
+          <div className="grid gap-5">
+            {steps.map((step, index) => (
+              <article
+                className="overflow-hidden border border-[#F7F1E7]/12 bg-[#15110D]"
+                key={step.number}
+              >
+                <img
+                  alt={step.image.alt}
+                  className="aspect-[4/5] w-full object-cover sm:aspect-[16/10]"
+                  decoding="async"
+                  loading={index === 0 ? "eager" : "lazy"}
+                  src={step.image.src}
+                />
+                <div className="liquid-glass scroll-story-mobile-panel m-3 p-5">
+                  <p className="text-sm font-medium text-[#C8A45D]">
+                    {step.number} / {String(total).padStart(2, "0")}
+                  </p>
+                  <h3 className="mt-2 font-display text-3xl leading-tight text-[#F7F1E7]">
+                    {step.title}
+                  </h3>
+                </div>
+              </article>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section
+        aria-label={content.title}
+        className="scroll-story-pinned relative min-h-svh overflow-hidden bg-[#070605]"
+        id="scroll-story-pinned"
+        ref={rootRef}
+      >
+        <div className="absolute inset-0">
+          {steps.map((step, index) => (
+            <img
+              alt=""
+              aria-hidden="true"
+              className="scroll-story-image absolute inset-0 h-full w-full object-cover opacity-0"
+              decoding="async"
+              key={step.number}
+              loading={index === 0 ? "eager" : "lazy"}
+              src={step.image.src}
+            />
+          ))}
+        </div>
+
+        <div className="absolute inset-0 bg-[#070605]/24" />
+        <div className="hero-bottom-blur absolute inset-x-0 bottom-0 h-[54svh] opacity-90" />
+
+        <Container className="relative z-10 flex min-h-svh items-end pb-10 pt-20 lg:pb-14">
+          <div className="grid w-full gap-8 lg:grid-cols-[1fr_0.54fr] lg:items-end">
+            <div className="max-w-3xl pb-2">
+              <p className="mb-5 text-sm font-medium uppercase text-[#C8A45D] text-shadow-soft">
+                {content.progressLabel} {activeStep.number} /{" "}
+                {String(total).padStart(2, "0")}
+              </p>
+              <h2 className="font-display text-5xl font-normal leading-none text-[#F7F1E7] text-shadow-soft sm:text-6xl lg:text-8xl">
+                {content.title}
+              </h2>
+              <p className="mt-6 max-w-2xl text-base leading-8 text-[#F7F1E7]/86 text-shadow-soft sm:text-lg">
+                {content.subtitle}
+              </p>
+            </div>
+
+            <aside className="liquid-glass scroll-story-panel p-5 text-[#F7F1E7] sm:p-6">
+              <div className="flex items-center justify-between gap-5 text-sm text-[#D8C3A5]">
+                <span>{content.progressLabel}</span>
+                <span>
+                  {activeStep.number} / {String(total).padStart(2, "0")}
+                </span>
+              </div>
+
+              <div className="mt-4 h-px overflow-hidden bg-[#F7F1E7]/18">
+                <span className="scroll-story-progress-fill block h-px w-full origin-left scale-x-0 bg-[#C8A45D]" />
+              </div>
+
+              <div
+                aria-live="polite"
+                className="scroll-story-copy animate-blur-fade-up mt-6"
+                key={activeStep.number}
+              >
+                <p className="text-sm text-[#C8A45D]">{activeStep.number}</p>
+                <h3 className="mt-2 font-display text-3xl leading-tight text-[#F7F1E7] sm:text-4xl">
+                  {activeStep.title}
+                </h3>
+              </div>
+
+              <ol className="mt-7 grid gap-2">
+                {steps.map((step, index) => (
+                  <li
+                    className={`flex items-center gap-3 text-sm transition-colors duration-500 ${
+                      index === activeIndex
+                        ? "text-[#F7F1E7]"
+                        : "text-[#F7F1E7]/45"
+                    }`}
+                    key={step.number}
+                  >
+                    <span
+                      className={`h-px w-8 transition-colors duration-500 ${
+                        index === activeIndex
+                          ? "bg-[#C8A45D]"
+                          : "bg-[#F7F1E7]/22"
+                      }`}
+                    />
+                    <span>{step.number}</span>
+                    <span>{step.title}</span>
+                  </li>
+                ))}
+              </ol>
+            </aside>
+          </div>
+        </Container>
+      </section>
+    </>
+  );
+}
+
+export default ScrollStorySection;
