@@ -1,17 +1,18 @@
 import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs) {
-  return clsx(inputs);
+  return twMerge(clsx(inputs));
 }
 
-export function getWhatsAppHref(number, message = "") {
-  const cleanedNumber = number?.replace(/[^\d]/g, "");
+export function getWhatsAppHref(phoneNumber, message = "") {
+  const normalizedPhone = String(phoneNumber ?? "").replace(/\D/g, "");
 
-  if (!cleanedNumber) {
+  if (!normalizedPhone) {
     return "#contact";
   }
 
-  const text = message ? `?text=${encodeURIComponent(message)}` : "";
+  const encodedMessage = message ? `?text=${encodeURIComponent(message)}` : "";
 
-  return `https://wa.me/${cleanedNumber}${text}`;
+  return `https://wa.me/${normalizedPhone}${encodedMessage}`;
 }

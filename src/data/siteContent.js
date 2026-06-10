@@ -44,14 +44,14 @@ export const siteContent = {
   fr: {
     languageLabel: "Choisir la langue",
     whatsappMessage:
-      "Bonjour Green Events Maroc, je souhaite demander un devis pour un événement.",
+      "Bonjour Green Events Maroc, je souhaite demander un devis pour un événement à Marrakech. Voici les premières informations: date, type d’événement, nombre d’invités, lieu.",
     hero: {
       navLabel: "Mariages & événements privés",
-      eyebrow: "Mariages & événements privés · Marrakech",
-      title: "Créateurs d’expériences sur mesure.",
+      eyebrow: "Organisation de mariages & événements à Marrakech",
+      title: "Créateurs d’expériences sur mesure à Marrakech.",
       subtitle:
-        "Traiteur & décorateur événementiel pour mariages, anniversaires et événements privés, pensés avec élégance, du décor à l’art de recevoir.",
-      primaryCta: "Demander un devis",
+        "Green Events Maroc imagine, planifie et coordonne mariages, fiançailles, événements privés et réceptions d’entreprise. Traiteur, décoration, art de table et gestion du jour J, réunis dans une expérience fluide.",
+      primaryCta: "Demander un devis sur WhatsApp",
       secondaryCta: "Voir les réalisations",
       menuLabel: "Ouvrir le menu",
       closeMenuLabel: "Fermer le menu",
@@ -68,55 +68,55 @@ export const siteContent = {
       },
       videoSrc: productionImages.hero.video,
       highlights: [
-        "Mariages sur mesure",
-        "Traiteur & décoration",
-        "Événements privés",
+        "Organisation de mariage",
+        "Traiteur & art de table",
+        "Décoration événementielle",
       ],
     },
     brandPromise: {
-      eyebrow: "Créateurs d’expérience",
+      eyebrow: "Une maison événementielle à Marrakech",
       title:
-        "Une table, une lumière, un service: tout doit raconter la même histoire.",
+        "Un lieu, une table, une lumière: chaque détail doit servir le même moment.",
       intro:
-        "Green Events Maroc réunit traiteur, décoration, art de recevoir et coordination pour créer des célébrations fluides, élégantes et profondément personnelles.",
+        "Basée à Marrakech, Green Events Maroc accompagne les clients marocains et internationaux dans la création d’événements sur mesure: mariages, anniversaires, baptêmes, dîners privés, soirées de fin d’année et événements d’entreprise.",
       statement:
-        "Une atmosphère sur mesure, portée par le goût du détail.",
+        "Planification, traiteur et décoration, pensés comme une seule expérience.",
       caption:
-        "Le décor, les fleurs, la table et le rythme du service sont pensés comme une seule composition.",
+        "Le décor, les fleurs, la table et le rythme du service avancent dans la même direction.",
       image: {
         src: productionImages.portfolio.floralCandles,
         alt: "Table de réception avec bougies, fleurs et lumière chaude",
       },
       pillars: [
         {
-          title: "Direction artistique",
+          title: "Planification complète",
           description:
-            "Une vision claire pour aligner le lieu, les matières, les fleurs, la table et la lumière.",
+            "Du premier échange à la coordination du jour J, chaque étape est préparée avec calme et précision.",
         },
         {
-          title: "Service maîtrisé",
+          title: "Traiteur & art de table",
           description:
-            "Une présence discrète, précise, pour que vos invités vivent le moment sans rupture.",
+            "Menus, service, dressage et rythme de table sont pensés pour accompagner naturellement la célébration.",
         },
         {
-          title: "Atmosphère marocaine",
+          title: "Décoration & mise en scène",
           description:
-            "Des détails chaleureux, des matières naturelles et une élégance adaptée à Marrakech.",
+            "Fleurs, bougies, matières, lumière et mobilier composent une atmosphère fidèle à votre événement.",
         },
       ],
     },
     servicesHeader: {
       eyebrow: "Savoir-faire",
-      title: "Mariages, anniversaires et événements privés.",
+      title: "Organisation, traiteur et événements privés à Marrakech.",
       intro:
-        "Chaque service est pensé comme une partie d’un ensemble: décor, table, cuisine, lumière et rythme.",
+        "Un accompagnement complet pour mariages, fiançailles, anniversaires, baptêmes, soirées privées, événements d’entreprise et célébrations du Nouvel An.",
     },
     services: [
       {
         label: "Mariage",
-        title: "Mariages",
+        title: "Organisation de mariage",
         description:
-          "Cérémonies, dîners et soirées imaginés avec émotion, précision et élégance.",
+          "Mariages à Marrakech et mariages de destination au Maroc, avec accompagnement complet de l’idée au jour J.",
         image: {
           src: productionImages.portfolio.weddingTable,
           alt: "Table de mariage en extérieur avec fleurs blanches et invités",
@@ -126,7 +126,7 @@ export const siteContent = {
         label: "Privé",
         title: "Événements privés",
         description:
-          "Dîners, réceptions et moments exclusifs avec une mise en scène intime et raffinée.",
+          "Fiançailles, anniversaires, baptêmes, dîners privés et soirées familiales, pensés avec élégance et justesse.",
         image: {
           src: productionImages.portfolio.privateDinner,
           alt: "Dîner privé aux chandelles dans un jardin à Marrakech",
@@ -134,9 +134,9 @@ export const siteContent = {
       },
       {
         label: "Traiteur",
-        title: "Traiteur",
+        title: "Traiteur Marrakech",
         description:
-          "Une expérience culinaire soignée, servie au rythme de votre événement.",
+          "Une expérience culinaire soignée: menu, présentation, service et art de table adaptés au rythme de votre événement.",
         image: {
           src: productionImages.portfolio.cateringDetail,
           alt: "Détail traiteur avec bouchées raffinées, bougies et fleurs",
@@ -146,22 +146,39 @@ export const siteContent = {
         label: "Décor",
         title: "Décoration événementielle",
         description:
-          "Fleurs, bougies, art de la table et matières composés avec justesse.",
+          "Scénographie, fleurs, bougies, mobilier, art de table et détails visuels pour créer une atmosphère cohérente.",
         image: {
           src: productionImages.portfolio.birthdaySetup,
           alt: "Table d'anniversaire élégante avec gâteau, bougies et fleurs",
         },
       },
+      {
+        label: "Entreprise",
+        title: "Événements d’entreprise",
+        description:
+          "Réceptions, dîners d’entreprise et moments de marque organisés avec discrétion, fluidité et sens du détail.",
+        image: {
+          src: productionImages.portfolio.nightAmbiance,
+          alt: "Réception d’entreprise de nuit à Marrakech avec lanternes et table élégante",
+        },
+      },
     ],
     portfolio: {
       eyebrow: "Réalisations",
-      title: "Des atmosphères qui donnent envie de recevoir.",
+      title: "Des mariages et événements pensés dans les moindres détails.",
       intro:
         "Un aperçu de l’univers Green Events Maroc: tables, lumière, fleurs, cuisine et lieux choisis pour créer une présence mémorable.",
+      controls: {
+        previous: "Réalisation précédente",
+        next: "Réalisation suivante",
+        choose: "Voir cette réalisation",
+      },
       items: [
         {
           label: "Mariage",
-          title: "Table de mariage en plein air",
+          title: "Mariage en plein air",
+          quote:
+            "Une table longue, des fleurs blanches et une lumière douce pour un mariage à Marrakech pensé autour de l’accueil.",
           image: {
             src: productionImages.portfolio.weddingTable,
             alt: "Table de mariage en extérieur à Marrakech",
@@ -170,6 +187,8 @@ export const siteContent = {
         {
           label: "Dîner privé",
           title: "Dîner aux chandelles",
+          quote:
+            "Un moment plus intime, porté par les bougies, la table et un service discret.",
           image: {
             src: productionImages.portfolio.privateDinner,
             alt: "Longue table de dîner privé éclairée aux bougies",
@@ -177,7 +196,9 @@ export const siteContent = {
         },
         {
           label: "Décoration",
-          title: "Fleurs et bougies",
+          title: "Décoration florale",
+          quote:
+            "Fleurs, matières et lumière donnent le ton avant même l’arrivée des invités.",
           image: {
             src: productionImages.portfolio.floralCandles,
             alt: "Décoration florale avec bougies et lanternes",
@@ -185,7 +206,9 @@ export const siteContent = {
         },
         {
           label: "Traiteur",
-          title: "Détails culinaires",
+          title: "Détail traiteur",
+          quote:
+            "La cuisine s’intègre à la scène: présentation, rythme et service restent alignés.",
           image: {
             src: productionImages.portfolio.cateringDetail,
             alt: "Bouchées traiteur présentées sur une table élégante",
@@ -193,7 +216,9 @@ export const siteContent = {
         },
         {
           label: "Anniversaire",
-          title: "Table privée avec gâteau",
+          title: "Anniversaire privé",
+          quote:
+            "Une célébration familiale avec le même soin qu’un mariage: table, gâteau, décor et ambiance.",
           image: {
             src: productionImages.portfolio.birthdaySetup,
             alt: "Table d'anniversaire raffinée avec gâteau et fleurs",
@@ -201,7 +226,9 @@ export const siteContent = {
         },
         {
           label: "Ambiance",
-          title: "Nuit chaude à Marrakech",
+          title: "Ambiance de nuit",
+          quote:
+            "Lanternes, bougies et chaleur du soir créent une atmosphère mémorable.",
           image: {
             src: productionImages.portfolio.nightAmbiance,
             alt: "Lieu de réception illuminé le soir à Marrakech",
@@ -211,9 +238,9 @@ export const siteContent = {
     },
     processHeader: {
       eyebrow: "Méthode",
-      title: "De la première intention au dernier service.",
+      title: "De votre première idée au jour de l’événement.",
       intro:
-        "Une préparation calme, précise, pensée pour que le jour de l’événement semble naturellement fluide.",
+        "Nous clarifions vos envies, votre lieu, vos invités et votre budget, puis nous coordonnons les équipes pour une célébration fluide.",
       image: {
         src: productionImages.portfolio.nightAmbiance,
         alt: "Réception de nuit à Marrakech avec lumières chaudes et ambiance de célébration",
@@ -222,59 +249,59 @@ export const siteContent = {
     process: [
       {
         step: "01",
-        title: "Écoute",
+        title: "Échange",
         description:
-          "Nous découvrons votre lieu, vos invités, votre rythme et l’atmosphère recherchée.",
+          "Nous comprenons votre événement, vos priorités, vos invités et votre niveau d’accompagnement souhaité.",
       },
       {
         step: "02",
         title: "Direction",
         description:
-          "Nous construisons une proposition cohérente: décor, table, cuisine, lumière et expérience.",
+          "Nous construisons une proposition claire: planification, décoration, traiteur, table, lumière et organisation.",
       },
       {
         step: "03",
         title: "Préparation",
         description:
-          "Les détails sont alignés avec les équipes pour une exécution précise et sereine.",
+          "Les prestataires, les détails et le déroulé sont alignés avant l’événement.",
       },
       {
         step: "04",
         title: "Jour J",
         description:
-          "La célébration prend vie avec élégance, rythme et attention discrète.",
+          "L’équipe coordonne la mise en place, le service et le rythme pour que vous puissiez profiter du moment.",
       },
     ],
     whyGreenEvents: {
       eyebrow: "Pourquoi Green Events",
       title:
-        "Le goût du beau, la précision du service et la chaleur d’une vraie célébration.",
+        "Pourquoi confier votre événement à Green Events Maroc?",
       intro:
-        "Un événement réussi ne se limite pas à un décor. Il se ressent dans l’accueil, la table, la lumière, la cuisine et la sérénité de chaque moment.",
+        "Parce qu’un événement réussi demande plus qu’un beau décor: il faut une vision, une organisation claire, une table soignée et une équipe présente au bon moment.",
       image: {
         src: productionImages.portfolio.privateDinner,
         alt: "Dîner privé chaleureux à Marrakech avec table élégante et invités",
       },
       highlights: [
         {
-          title: "Une vision unique",
+          title: "Basés à Marrakech",
           description:
-            "Décoration, traiteur, fleurs et art de la table avancent dans la même direction.",
+            "Une connaissance du terrain, des lieux, des rythmes et des attentes des événements au Maroc.",
         },
         {
-          title: "Une présence discrète",
+          title: "Clients internationaux",
           description:
-            "L’équipe accompagne le rythme de la journée sans alourdir l’expérience des invités.",
+            "Un accompagnement clair pour les couples, familles et entreprises qui organisent leur événement à distance.",
         },
         {
-          title: "Un sens du détail",
+          title: "Une seule direction",
           description:
-            "Les matières, les bougies, les assiettes et les saveurs créent une atmosphère cohérente.",
+            "Planning, traiteur, décoration et art de table avancent ensemble.",
         },
         {
-          title: "L’esprit de Marrakech",
+          title: "Des événements variés",
           description:
-            "La lumière, les jardins, les lanternes et l’hospitalité marocaine donnent au moment sa chaleur.",
+            "Mariages, fiançailles, anniversaires, baptêmes, soirées privées, Nouvel An et réceptions d’entreprise.",
         },
       ],
     },
@@ -309,11 +336,11 @@ export const siteContent = {
     },
     finalCta: {
       eyebrow: "Votre événement",
-      title: "Parlons de la célébration que vous imaginez.",
+      title: "Parlons de votre événement à Marrakech.",
       intro:
-        "Mariage, anniversaire ou dîner privé: envoyez-nous quelques détails et nous vous répondrons avec une première direction claire.",
-      primaryCta: "Écrire sur WhatsApp",
-      instagramCta: "Voir Instagram",
+        "Envoyez-nous la date, le type d’événement, le nombre d’invités et le lieu si vous l’avez déjà. Nous vous répondrons avec une première direction claire.",
+      primaryCta: "Demander mon devis sur WhatsApp",
+      instagramCta: "Voir l’univers Instagram",
       image: {
         src: productionImages.hero.mobile,
         alt: "Célébration de mariage joyeuse à Marrakech autour d’une table aux bougies",
@@ -321,13 +348,14 @@ export const siteContent = {
     },
     footer: {
       description:
-        "Traiteur et décorateur événementiel à Marrakech pour mariages, anniversaires et événements privés pensés sur mesure.",
+        "Organisateur d’événements et traiteur à Marrakech, Green Events Maroc crée des mariages, événements privés et réceptions d’entreprise sur mesure, avec décoration, art de table et coordination complète.",
+      location: "Targa, Rue AL Argane, Marrakech 40000",
       navigationTitle: "Navigation",
       contactTitle: "Contact",
-      whatsappLabel: "Écrire sur WhatsApp",
+      whatsappLabel: "Demander un devis sur WhatsApp",
       phoneLabel: "Téléphone",
       instagramLabel: "Instagram",
-      legal: "Green Events Maroc. Mariages & événements privés à Marrakech.",
+      legal: "Green Events Maroc. Organisation de mariages, traiteur et événements privés à Marrakech.",
       links: [
         { label: "Réalisations", href: "#realisations" },
         { label: "Services", href: "#services" },
@@ -336,13 +364,13 @@ export const siteContent = {
       ],
     },
     stickyWhatsApp: {
-      label: "Devis WhatsApp",
-      ariaLabel: "Demander un devis WhatsApp",
+      label: "Devis événement",
+      ariaLabel: "Demander un devis événement sur WhatsApp",
     },
     scrollStory: {
-      title: "From vision to celebration",
+      title: "De l’idée à la célébration",
       subtitle:
-        "Chaque événement commence par une intention. Nous la transformons en décor, en saveurs, en lumière et en souvenirs.",
+        "Chaque événement commence par une intention. Nous la transformons en lieu, en table, en saveurs, en lumière et en souvenirs.",
       progressLabel: "Étape",
       steps: [
         {
@@ -355,7 +383,7 @@ export const siteContent = {
         },
         {
           number: "02",
-          title: "Composer les détails",
+          title: "Composer la scénographie",
           image: {
             src: productionImages.scrollStory.images[1],
             alt: "Détails de table avec fleurs, bougies, assiettes et textures",
@@ -363,7 +391,7 @@ export const siteContent = {
         },
         {
           number: "03",
-          title: "Sublimer la table",
+          title: "Dresser la table",
           image: {
             src: productionImages.scrollStory.images[2],
             alt: "Détail traiteur raffiné sur une table événementielle",
@@ -371,7 +399,7 @@ export const siteContent = {
         },
         {
           number: "04",
-          title: "Allumer l’émotion",
+          title: "Régler le service",
           image: {
             src: productionImages.scrollStory.images[3],
             alt: "Ambiance de nuit avec lanternes, bougies et lumière chaude",
@@ -379,7 +407,7 @@ export const siteContent = {
         },
         {
           number: "05",
-          title: "Créer le moment",
+          title: "Vivre le moment",
           image: {
             src: productionImages.scrollStory.images[4],
             alt: "Célébration finale avec table de mariage illuminée à Marrakech",
@@ -391,14 +419,14 @@ export const siteContent = {
   en: {
     languageLabel: "Choose language",
     whatsappMessage:
-      "Hello Green Events Maroc, I would like to request a quote for an event.",
+      "Hello Green Events Maroc, I would like to request a quote for an event in Marrakech. First details: date, event type, guest count, venue.",
     hero: {
       navLabel: "Weddings & private events",
-      eyebrow: "Wedding & Private Events · Marrakech",
-      title: "Tailor-made celebrations, beautifully staged.",
+      eyebrow: "Wedding planner & event planner in Marrakech",
+      title: "Tailor-made event experiences in Marrakech.",
       subtitle:
-        "Catering and event decoration for weddings, birthdays, and private events, crafted with elegance from styling to hospitality.",
-      primaryCta: "Request a quote",
+        "Green Events Maroc designs, plans, and manages weddings, engagements, private events, and corporate celebrations. Catering, decoration, table styling, and event-day coordination come together in one refined experience.",
+      primaryCta: "Request a WhatsApp quote",
       secondaryCta: "View our work",
       menuLabel: "Open menu",
       closeMenuLabel: "Close menu",
@@ -411,55 +439,59 @@ export const siteContent = {
       image: {
         desktopSrc: productionImages.hero.desktop,
         mobileSrc: productionImages.hero.mobile,
-        alt: "Joyful wedding dinner in Marrakesh with guests, candles, white flowers and lanterns",
+        alt: "Joyful wedding dinner in Marrakech with guests, candles, white flowers and lanterns",
       },
       videoSrc: productionImages.hero.video,
-      highlights: ["Bespoke weddings", "Catering & styling", "Private events"],
+      highlights: [
+        "Wedding planning",
+        "Catering & table styling",
+        "Event decoration",
+      ],
     },
     brandPromise: {
-      eyebrow: "Experience creators",
+      eyebrow: "A Marrakech event house",
       title:
-        "A table, a light, a service rhythm: everything should tell one story.",
+        "One venue, one table, one light: every detail should serve the same moment.",
       intro:
-        "Green Events Maroc brings catering, event decoration, hosting detail and coordination together to create celebrations that feel refined, fluid and deeply personal.",
+        "Based in Marrakech, Green Events Maroc supports Moroccan and international clients with tailor-made weddings, birthdays, baptisms, private dinners, New Year celebrations, and corporate events.",
       statement:
-        "A tailor-made atmosphere shaped by careful detail.",
+        "Planning, catering, and decoration designed as one experience.",
       caption:
-        "Decor, flowers, table styling and service rhythm are composed as one experience.",
+        "Decor, flowers, table styling, and service rhythm move in one direction.",
       image: {
         src: productionImages.portfolio.floralCandles,
         alt: "Reception table with candles, flowers and warm light",
       },
       pillars: [
         {
-          title: "Creative direction",
+          title: "Complete planning",
           description:
-            "A clear vision to align the venue, materials, florals, table styling and light.",
+            "From the first conversation to event-day coordination, every step is prepared with calm precision.",
         },
         {
-          title: "Controlled service",
+          title: "Catering & table styling",
           description:
-            "A discreet, precise presence so guests experience the moment without interruption.",
+            "Menus, service, table setting, and pacing are designed around the rhythm of your celebration.",
         },
         {
-          title: "Marrakesh atmosphere",
+          title: "Decoration & staging",
           description:
-            "Warm details, natural textures and an elegance shaped for Marrakesh.",
+            "Florals, candles, materials, light, and furniture create an atmosphere true to your event.",
         },
       ],
     },
     servicesHeader: {
       eyebrow: "Expertise",
-      title: "Weddings, birthdays and private events.",
+      title: "Wedding planning, catering, and private events in Marrakech.",
       intro:
-        "Each service is designed as part of a complete atmosphere: decor, table, cuisine, light and rhythm.",
+        "Complete support for weddings, engagements, birthdays, baptisms, private dinners, New Year celebrations, corporate events, and destination weddings in Morocco.",
     },
     services: [
       {
         label: "Wedding",
-        title: "Weddings",
+        title: "Wedding planning",
         description:
-          "Ceremonies, dinners and evenings designed with emotion, precision and elegance.",
+          "Weddings in Marrakech and destination weddings in Morocco, planned from first idea to event day.",
         image: {
           src: productionImages.portfolio.weddingTable,
           alt: "Outdoor wedding table with white flowers and guests",
@@ -469,17 +501,17 @@ export const siteContent = {
         label: "Private",
         title: "Private events",
         description:
-          "Dinners, receptions and exclusive moments with intimate, refined staging.",
+          "Engagements, birthdays, baptisms, family dinners, and private celebrations shaped with care.",
         image: {
           src: productionImages.portfolio.privateDinner,
-          alt: "Candlelit private dinner in a Marrakesh garden",
+          alt: "Candlelit private dinner in a Marrakech garden",
         },
       },
       {
         label: "Catering",
-        title: "Catering",
+        title: "Catering in Marrakech",
         description:
-          "A polished culinary experience served at the pace of your event.",
+          "Menus, presentation, service, and table styling designed around the rhythm of your event.",
         image: {
           src: productionImages.portfolio.cateringDetail,
           alt: "Catering detail with refined bites, candles and flowers",
@@ -489,30 +521,49 @@ export const siteContent = {
         label: "Decor",
         title: "Event decoration",
         description:
-          "Flowers, candles, table styling and materials composed with restraint.",
+          "Florals, candles, furniture, lighting, and visual details composed into one atmosphere.",
         image: {
           src: productionImages.portfolio.birthdaySetup,
           alt: "Elegant birthday table with cake, candles and flowers",
         },
       },
+      {
+        label: "Corporate",
+        title: "Corporate events",
+        description:
+          "Business dinners, receptions, and brand moments managed with discretion and precision.",
+        image: {
+          src: productionImages.portfolio.nightAmbiance,
+          alt: "Corporate reception at night in Marrakech with lanterns and an elegant table",
+        },
+      },
     ],
     portfolio: {
       eyebrow: "Portfolio",
-      title: "Atmospheres that make people want to gather.",
+      title: "Weddings and events shaped through every detail.",
       intro:
         "A glimpse into Green Events Maroc: tables, light, flowers, cuisine and venues selected to create a memorable presence.",
+      controls: {
+        previous: "Previous realization",
+        next: "Next realization",
+        choose: "View this realization",
+      },
       items: [
         {
           label: "Wedding",
-          title: "Outdoor wedding table",
+          title: "Outdoor wedding",
+          quote:
+            "A long table, white flowers, and soft light for a Marrakech wedding designed around hospitality.",
           image: {
             src: productionImages.portfolio.weddingTable,
-            alt: "Outdoor wedding table in Marrakesh",
+            alt: "Outdoor wedding table in Marrakech",
           },
         },
         {
           label: "Private dinner",
           title: "Candlelit dinner",
+          quote:
+            "A more intimate moment, shaped by candles, table setting, and discreet service.",
           image: {
             src: productionImages.portfolio.privateDinner,
             alt: "Long private dinner table lit by candles",
@@ -520,7 +571,9 @@ export const siteContent = {
         },
         {
           label: "Decoration",
-          title: "Flowers and candles",
+          title: "Floral decoration",
+          quote:
+            "Flowers, materials, and light set the tone before guests arrive.",
           image: {
             src: productionImages.portfolio.floralCandles,
             alt: "Floral decoration with candles and lanterns",
@@ -528,7 +581,9 @@ export const siteContent = {
         },
         {
           label: "Catering",
-          title: "Culinary details",
+          title: "Catering detail",
+          quote:
+            "Cuisine becomes part of the scene: presentation, pacing, and service stay aligned.",
           image: {
             src: productionImages.portfolio.cateringDetail,
             alt: "Catering bites presented on an elegant table",
@@ -536,7 +591,9 @@ export const siteContent = {
         },
         {
           label: "Birthday",
-          title: "Private table with cake",
+          title: "Private birthday",
+          quote:
+            "A family celebration with the same care as a wedding: table, cake, decor, and ambience.",
           image: {
             src: productionImages.portfolio.birthdaySetup,
             alt: "Refined birthday table with cake and flowers",
@@ -544,80 +601,82 @@ export const siteContent = {
         },
         {
           label: "Ambience",
-          title: "Warm night in Marrakesh",
+          title: "Night ambience",
+          quote:
+            "Lanterns, candles, and warm evening air create a memorable atmosphere.",
           image: {
             src: productionImages.portfolio.nightAmbiance,
-            alt: "Evening reception venue illuminated in Marrakesh",
+            alt: "Evening reception venue illuminated in Marrakech",
           },
         },
       ],
     },
     processHeader: {
       eyebrow: "Method",
-      title: "From first intention to final service.",
+      title: "From your first idea to event day.",
       intro:
-        "A calm, precise preparation process designed to make the event day feel naturally fluid.",
+        "We clarify your vision, venue, guests, and priorities, then coordinate the teams so the celebration feels fluid.",
       image: {
         src: productionImages.portfolio.nightAmbiance,
-        alt: "Night reception in Marrakesh with warm lights and celebration atmosphere",
+        alt: "Night reception in Marrakech with warm lights and celebration atmosphere",
       },
     },
     process: [
       {
         step: "01",
-        title: "Listening",
+        title: "Conversation",
         description:
-          "We understand your venue, guests, rhythm and desired atmosphere.",
+          "We understand your event, priorities, guests, and level of support needed.",
       },
       {
         step: "02",
         title: "Direction",
         description:
-          "We build one coherent proposal: decor, table, cuisine, lighting and experience.",
+          "We build a clear proposal: planning, decoration, catering, table styling, lighting, and organization.",
       },
       {
         step: "03",
         title: "Preparation",
         description:
-          "Details are aligned with the teams for a precise and calm execution.",
+          "Suppliers, details, and timing are aligned before the event.",
       },
       {
         step: "04",
         title: "Event day",
         description:
-          "The celebration comes to life with elegance, rhythm and discreet attention.",
+          "The team coordinates setup, service, and flow so you can enjoy the moment.",
       },
     ],
     whyGreenEvents: {
       eyebrow: "Why Green Events",
       title:
-        "Taste, service precision, and the warmth of a true celebration.",
+        "Why choose Green Events Maroc for your event?",
       intro:
-        "A successful event is more than styling. It is felt through the welcome, the table, the light, the cuisine and the calm behind every moment.",
+        "A successful event needs more than beautiful styling. It needs a clear vision, calm organization, a thoughtful table, and a team present at the right moments.",
       image: {
         src: productionImages.portfolio.privateDinner,
-        alt: "Warm private dinner in Marrakesh with elegant table and guests",
+        alt: "Warm private dinner in Marrakech with elegant table and guests",
       },
       highlights: [
         {
-          title: "One clear vision",
+          title: "Based in Marrakech",
           description:
-            "Decoration, catering, florals and table styling move in the same direction.",
+            "Local knowledge of venues, timing, suppliers, and event expectations in Morocco.",
         },
         {
-          title: "A discreet presence",
+          title: "International clients",
           description:
-            "The team supports the pace of the day without weighing down the guest experience.",
+            "Clear support for couples, families, and companies planning their event from abroad.",
         },
         {
-          title: "Attention to detail",
+          title: "One direction",
           description:
-            "Materials, candles, plates and flavors create one coherent atmosphere.",
+            "Planning, catering, decoration, and table styling move together.",
         },
         {
-          title: "Marrakesh warmth",
+          title: "Many event formats",
           description:
-            "Light, gardens, lanterns and Moroccan hospitality give the moment its feeling.",
+            "Weddings, engagements, birthdays, baptisms, private parties, New Year events, and corporate receptions.",
         },
       ],
     },
@@ -641,7 +700,7 @@ export const siteContent = {
         {
           label: "Light",
           image: productionImages.portfolio.nightAmbiance,
-          alt: "Evening light atmosphere in Marrakesh",
+          alt: "Evening light atmosphere in Marrakech",
         },
         {
           label: "Flowers",
@@ -652,25 +711,26 @@ export const siteContent = {
     },
     finalCta: {
       eyebrow: "Your event",
-      title: "Let’s talk about the celebration you have in mind.",
+      title: "Tell us about your event in Marrakech.",
       intro:
-        "Wedding, birthday or private dinner: send us a few details and we will reply with a clear first direction.",
-      primaryCta: "Write on WhatsApp",
+        "Send us the date, event type, guest count, and venue if you already have one. We will reply with a clear first direction.",
+      primaryCta: "Request my WhatsApp quote",
       instagramCta: "View Instagram",
       image: {
         src: productionImages.hero.mobile,
-        alt: "Joyful wedding celebration in Marrakesh around a candlelit table",
+        alt: "Joyful wedding celebration in Marrakech around a candlelit table",
       },
     },
     footer: {
       description:
-        "Catering and event decoration in Marrakesh for bespoke weddings, birthdays and private events.",
+        "Event planner and caterer in Marrakech, Green Events Maroc creates tailor-made weddings, private events, and corporate receptions with decoration, table styling, and full coordination.",
+      location: "Targa, Rue AL Argane, Marrakech 40000",
       navigationTitle: "Navigation",
       contactTitle: "Contact",
-      whatsappLabel: "Write on WhatsApp",
+      whatsappLabel: "Request a WhatsApp quote",
       phoneLabel: "Phone",
       instagramLabel: "Instagram",
-      legal: "Green Events Maroc. Marrakesh Wedding & Private Events.",
+      legal: "Green Events Maroc. Wedding planning, catering, and private events in Marrakech.",
       links: [
         { label: "Work", href: "#realisations" },
         { label: "Services", href: "#services" },
@@ -679,13 +739,13 @@ export const siteContent = {
       ],
     },
     stickyWhatsApp: {
-      label: "WhatsApp quote",
-      ariaLabel: "Request a WhatsApp quote",
+      label: "Event quote",
+      ariaLabel: "Request an event quote on WhatsApp",
     },
     scrollStory: {
       title: "From vision to celebration",
       subtitle:
-        "Every event begins with an intention. We turn it into styling, flavors, light and lasting memories.",
+        "Every event begins with an intention. We turn it into a venue, a table, flavors, light and lasting memories.",
       progressLabel: "Step",
       steps: [
         {
@@ -693,12 +753,12 @@ export const siteContent = {
           title: "Imagine the atmosphere",
           image: {
             src: productionImages.scrollStory.images[0],
-            alt: "Marrakesh reception venue prepared for an elegant wedding",
+            alt: "Marrakech reception venue prepared for an elegant wedding",
           },
         },
         {
           number: "02",
-          title: "Compose the details",
+          title: "Compose the styling",
           image: {
             src: productionImages.scrollStory.images[1],
             alt: "Table details with flowers, candles, plates and textures",
@@ -706,7 +766,7 @@ export const siteContent = {
         },
         {
           number: "03",
-          title: "Elevate the table",
+          title: "Set the table",
           image: {
             src: productionImages.scrollStory.images[2],
             alt: "Refined catering detail on an event table",
@@ -714,7 +774,7 @@ export const siteContent = {
         },
         {
           number: "04",
-          title: "Light the emotion",
+          title: "Shape the service",
           image: {
             src: productionImages.scrollStory.images[3],
             alt: "Night ambience with lanterns, candles and warm light",
@@ -722,10 +782,10 @@ export const siteContent = {
         },
         {
           number: "05",
-          title: "Create the moment",
+          title: "Live the moment",
           image: {
             src: productionImages.scrollStory.images[4],
-            alt: "Final celebration with illuminated wedding table in Marrakesh",
+            alt: "Final celebration with illuminated wedding table in Marrakech",
           },
         },
       ],

@@ -19,6 +19,11 @@ function FooterSection({ brand, content, whatsappMessage }) {
             <p className="mt-5 max-w-xl text-base leading-8 text-[var(--color-muted)]">
               {content.description}
             </p>
+            {content.location ? (
+              <p className="mt-4 text-sm leading-6 text-[rgb(33_29_22_/_0.72)]">
+                {content.location}
+              </p>
+            ) : null}
           </div>
 
           <nav aria-label={content.navigationTitle}>

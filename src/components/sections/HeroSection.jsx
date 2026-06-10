@@ -204,7 +204,7 @@ function HeroSection({
                 <ArrowUpRight aria-hidden="true" size={17} />
               </Button>
               <Button
-                className="liquid-glass w-full border-[#F7F1E7]/24 bg-transparent text-[#F7F1E7] hover:border-[#C8A45D] hover:text-[#C8A45D] sm:w-auto"
+                className="liquid-glass w-full border-[#F7F1E7]/24 bg-transparent text-black hover:border-[#C8A45D] hover:text-[#C8A45D] sm:w-auto"
                 href="#realisations"
                 variant="outline"
               >
