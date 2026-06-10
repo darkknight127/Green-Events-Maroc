@@ -12,7 +12,7 @@ function SectionHeader({ eyebrow, title, intro, align = "left", className }) {
       )}
     >
       {eyebrow ? (
-        <p className="mb-4 text-sm font-medium uppercase text-[#C8A45D]">
+        <p className="mb-4 text-sm font-medium text-[#C8A45D]">
           {eyebrow}
         </p>
       ) : null}

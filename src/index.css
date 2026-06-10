@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-family: "Avenir Next", Avenir, "Helvetica Neue", Arial, sans-serif;
   color: #f7f1e7;
   background: #070605;
   color-scheme: dark;
@@ -11,7 +11,7 @@
   -moz-osx-font-smoothing: grayscale;
 
   --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  --font-body: Inter, ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Avenir Next", Avenir, "Helvetica Neue", Arial, sans-serif;
   --color-black: #070605;
   --color-ivory: #f7f1e7;
   --color-gold: #c8a45d;
@@ -33,7 +33,18 @@ body {
 }
 
 img {
+  display: block;
   max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 .font-display {
@@ -42,15 +53,19 @@ img {
 
 .liquid-glass {
   border: 1px solid rgb(247 241 231 / 0.2);
-  border-radius: 999px;
+  border-radius: var(--glass-radius, 999px);
   background:
     linear-gradient(135deg, rgb(247 241 231 / 0.16), rgb(247 241 231 / 0.05)),
     rgb(7 6 5 / 0.2);
   box-shadow:
-    inset 0 1px 0 rgb(247 241 231 / 0.18),
-    0 18px 50px rgb(0 0 0 / 0.18);
-  backdrop-filter: blur(18px) saturate(118%);
-  -webkit-backdrop-filter: blur(18px) saturate(118%);
+    inset 0 1px 0 rgb(247 241 231 / 0.16),
+    0 4px 8px rgb(0 0 0 / 0.2);
+  backdrop-filter: blur(14px) saturate(112%);
+  -webkit-backdrop-filter: blur(14px) saturate(112%);
+}
+
+.liquid-glass-panel {
+  --glass-radius: 0.875rem;
 }
 
 .hero-bottom-blur {
@@ -81,34 +96,155 @@ img {
   animation: blurFadeUp 1.15s cubic-bezier(0.19, 1, 0.22, 1) both;
 }
 
+.luxury-section {
+  isolation: isolate;
+  background:
+    radial-gradient(
+      ellipse at 50% -12%,
+      rgb(200 164 93 / 0.08),
+      transparent 32rem
+    ),
+    linear-gradient(180deg, #070605 0%, #090705 48%, #070605 100%);
+}
+
+.luxury-section::before {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(90deg, rgb(247 241 231 / 0.035) 1px, transparent 1px),
+    linear-gradient(180deg, rgb(247 241 231 / 0.025) 1px, transparent 1px);
+  background-size: 7rem 7rem;
+  mask-image: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgb(0 0 0 / 0.7) 22%,
+    rgb(0 0 0 / 0.38) 78%,
+    transparent 100%
+  );
+}
+
+.luxury-ambient {
+  position: absolute;
+  z-index: -1;
+  width: min(22rem, 70vw);
+  height: min(22rem, 70vw);
+  pointer-events: none;
+  background: rgb(200 164 93 / 0.13);
+  border-radius: 999px;
+  filter: blur(28px);
+  opacity: 0.62;
+}
+
+.luxury-ambient-left {
+  top: 14%;
+  left: -12rem;
+}
+
+.luxury-ambient-right {
+  right: -12rem;
+  bottom: 12%;
+  background: rgb(79 90 58 / 0.22);
+}
+
+.luxury-ambient-center {
+  top: 8%;
+  left: 50%;
+  width: min(30rem, 82vw);
+  height: min(30rem, 82vw);
+  background: rgb(200 164 93 / 0.12);
+  transform: translateX(-50%);
+}
+
+.luxury-panel,
+.luxury-cta-panel {
+  border: 1px solid rgb(247 241 231 / 0.14);
+  border-radius: 0.5rem;
+  background:
+    linear-gradient(135deg, rgb(247 241 231 / 0.1), rgb(247 241 231 / 0.035)),
+    rgb(13 10 7 / 0.72);
+  box-shadow:
+    inset 0 1px 0 rgb(247 241 231 / 0.1),
+    0 4px 8px rgb(0 0 0 / 0.22);
+  backdrop-filter: blur(10px) saturate(110%);
+  -webkit-backdrop-filter: blur(10px) saturate(110%);
+}
+
+.luxury-cta-panel {
+  background:
+    linear-gradient(135deg, rgb(79 90 58 / 0.28), transparent 46%),
+    linear-gradient(180deg, rgb(247 241 231 / 0.1), rgb(247 241 231 / 0.035)),
+    rgb(10 8 6 / 0.9);
+}
+
+.luxury-image-shell {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgb(247 241 231 / 0.12);
+  border-radius: 0.5rem;
+  background: #15110d;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.24);
+}
+
+.luxury-image-shell::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  box-shadow: inset 0 0 0 1px rgb(247 241 231 / 0.06);
+}
+
+.luxury-index {
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+  border-inline: 1px solid rgb(247 241 231 / 0.1);
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 5vw, 5.5rem);
+  line-height: 1;
+  color: rgb(200 164 93 / 0.92);
+}
+
+.service-editorial-row {
+  padding-block: 0.35rem;
+}
+
+.scroll-story-reduced {
+  display: block !important;
+}
+
+.scroll-story-mobile,
 .scroll-story-pinned {
   display: none !important;
 }
 
-.scroll-story-fallback {
-  display: block !important;
-}
-
 .scroll-story-panel,
-.scroll-story-mobile-panel {
-  border-radius: 1.5rem;
+.scroll-story-mobile-panel,
+.scroll-story-reduced-panel {
+  --glass-radius: 0.875rem;
+  border-radius: 0.875rem;
 }
 
-.scroll-story-image,
-.scroll-story-progress-fill,
+.scroll-story-mobile-image,
+.scroll-story-desktop-image,
+.scroll-story-mobile-progress-fill,
+.scroll-story-desktop-progress-fill,
 .scroll-story-copy {
   will-change: opacity, transform;
 }
 
-.scroll-story-image {
+.scroll-story-mobile-image,
+.scroll-story-desktop-image {
   transform: translateZ(0);
 }
 
 @keyframes blurFadeUp {
   from {
-    opacity: 0;
-    filter: blur(20px);
-    transform: translateY(40px);
+    opacity: 0.86;
+    filter: blur(4px);
+    transform: translateY(18px);
   }
 
   to {
@@ -133,12 +269,33 @@ img {
   }
 }
 
-@media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
-  .scroll-story-pinned {
-    display: block !important;
+@media (max-width: 639px) {
+  .luxury-panel,
+  .luxury-cta-panel {
+    backdrop-filter: blur(9px) saturate(108%);
+    -webkit-backdrop-filter: blur(9px) saturate(108%);
   }
 
-  .scroll-story-fallback {
+  .luxury-ambient {
+    filter: blur(22px);
+    opacity: 0.46;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-story-reduced {
     display: none !important;
+  }
+}
+
+@media (max-width: 767px) and (prefers-reduced-motion: no-preference) {
+  .scroll-story-mobile {
+    display: block !important;
+  }
+}
+
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  .scroll-story-pinned {
+    display: block !important;
   }
 }

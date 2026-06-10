@@ -46,7 +46,7 @@ export const siteContent = {
       eyebrow: "Wedding & Private Events · Marrakech",
       title: "Créateurs d’expériences sur mesure.",
       subtitle:
-        "Traiteur & décorateur événementiel pour mariages, anniversaires et événements privés — pensés avec élégance, du décor à l’art de recevoir.",
+        "Traiteur & décorateur événementiel pour mariages, anniversaires et événements privés, pensés avec élégance, du décor à l’art de recevoir.",
       primaryCta: "Demander un devis",
       secondaryCta: "Voir les réalisations",
       menuLabel: "Ouvrir le menu",
@@ -252,7 +252,7 @@ export const siteContent = {
     scrollStory: {
       title: "From vision to celebration",
       subtitle:
-        "Chaque événement commence par une intention. Nous la transformons en décor, en saveurs, en lumière — et en souvenirs.",
+        "Chaque événement commence par une intention. Nous la transformons en décor, en saveurs, en lumière et en souvenirs.",
       progressLabel: "Étape",
       steps: [
         {
@@ -307,7 +307,7 @@ export const siteContent = {
       eyebrow: "Wedding & Private Events · Marrakech",
       title: "Tailor-made celebrations, beautifully staged.",
       subtitle:
-        "Catering and event decoration for weddings, birthdays, and private events — crafted with elegance from styling to hospitality.",
+        "Catering and event decoration for weddings, birthdays, and private events, crafted with elegance from styling to hospitality.",
       primaryCta: "Request a quote",
       secondaryCta: "View our work",
       menuLabel: "Open menu",
@@ -509,7 +509,7 @@ export const siteContent = {
     scrollStory: {
       title: "From vision to celebration",
       subtitle:
-        "Every event begins with an intention. We turn it into styling, flavors, light — and lasting memories.",
+        "Every event begins with an intention. We turn it into styling, flavors, light and lasting memories.",
       progressLabel: "Step",
       steps: [
         {

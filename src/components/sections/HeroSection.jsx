@@ -47,7 +47,7 @@ function HeroSection({
       <div className="absolute inset-0 bg-[#070605]/18" />
       <div className="hero-bottom-blur absolute inset-x-0 bottom-0 h-[48svh]" />
 
-      <Container className="relative flex min-h-svh flex-col justify-between pb-8 pt-5 sm:pb-10 sm:pt-7 lg:pb-12">
+      <Container className="relative z-10 flex min-h-svh flex-col justify-between pb-8 pt-5 sm:pb-10 sm:pt-7 lg:pb-12">
         <header className="animate-blur-fade-up flex items-center justify-between gap-4 [animation-delay:80ms]">
           <a
             aria-label="Green Events Maroc"
@@ -101,7 +101,7 @@ function HeroSection({
         </header>
 
         <div
-          className={`liquid-glass absolute left-5 right-5 top-[4.75rem] z-20 overflow-hidden p-4 transition-all duration-500 ease-out sm:left-8 sm:right-8 lg:hidden ${
+          className={`liquid-glass liquid-glass-panel absolute left-5 right-5 top-[4.75rem] z-20 overflow-hidden p-4 transition-all duration-500 ease-out sm:left-8 sm:right-8 lg:hidden ${
             isMenuOpen
               ? "translate-y-0 opacity-100"
               : "pointer-events-none -translate-y-3 opacity-0"
