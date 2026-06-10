@@ -44,7 +44,7 @@ function HeroSection({
           }`}
         >
           <div
-            className={`relative flex items-center justify-between gap-4 transition-all duration-500 ease-out ${
+            className={`relative flex items-center justify-between gap-4 transition-all duration-500 ease-out lg:grid lg:grid-cols-[auto_minmax(0,1fr)_auto] lg:items-center ${
               isNavCompact
                 ? "liquid-glass px-4 py-2.5 sm:px-5"
                 : "px-0 py-0"
@@ -67,7 +67,9 @@ function HeroSection({
 
             <nav
               aria-label="Main navigation"
-              className={`absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 text-sm lg:flex ${
+              className={`hidden min-w-0 items-center justify-center justify-self-center text-sm lg:flex ${
+                isNavCompact ? "gap-5 xl:gap-6" : "gap-6 xl:gap-8"
+              } ${
                 isNavCompact
                   ? "text-[rgb(33_29_22_/_0.78)]"
                   : "text-[#F7F1E7]/86"
@@ -84,7 +86,7 @@ function HeroSection({
               ))}
             </nav>
 
-            <div className="hidden items-center gap-3 lg:flex">
+            <div className="hidden items-center justify-self-end gap-3 lg:flex">
               <LanguageSwitcher
                 activeLanguage={language}
                 ariaLabel={languageLabel}
