@@ -1,12 +1,15 @@
 import { useState } from "react";
 import BrandPromiseSection from "./components/sections/BrandPromiseSection";
 import FinalCtaSection from "./components/sections/FinalCtaSection";
+import FooterSection from "./components/sections/FooterSection";
 import HeroSection from "./components/sections/HeroSection";
 import PortfolioSection from "./components/sections/PortfolioSection";
 import ProcessSection from "./components/sections/ProcessSection";
 import ScrollStorySection from "./components/sections/ScrollStorySection";
 import ServicesSection from "./components/sections/ServicesSection";
+import SocialProofSection from "./components/sections/SocialProofSection";
 import StickyWhatsAppButton from "./components/sections/StickyWhatsAppButton";
+import WhyGreenEventsSection from "./components/sections/WhyGreenEventsSection";
 import { brand, defaultLanguage, siteContent } from "./data/siteContent";
 
 function App() {
@@ -15,7 +18,7 @@ function App() {
 
   return (
     <main
-      className="min-h-screen bg-[#070605] text-[#F7F1E7]"
+      className="min-h-screen bg-[var(--color-page)] text-[var(--color-ink)]"
       id="top"
       lang={language}
     >
@@ -35,9 +38,16 @@ function App() {
       />
       <PortfolioSection content={content.portfolio} />
       <ProcessSection header={content.processHeader} process={content.process} />
+      <WhyGreenEventsSection content={content.whyGreenEvents} />
+      <SocialProofSection brand={brand} content={content.socialProof} />
       <FinalCtaSection
         brand={brand}
         content={content.finalCta}
+        whatsappMessage={content.whatsappMessage}
+      />
+      <FooterSection
+        brand={brand}
+        content={content.footer}
         whatsappMessage={content.whatsappMessage}
       />
       <StickyWhatsAppButton

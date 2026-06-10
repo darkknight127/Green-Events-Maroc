@@ -2,13 +2,13 @@ import { cn } from "../../lib/utils";
 
 const variants = {
   gold:
-    "border-[#C8A45D] bg-[#C8A45D] text-[#070605] hover:bg-[#F7F1E7] hover:border-[#F7F1E7]",
+    "border-[var(--color-gold)] bg-[var(--color-gold)] text-[var(--color-surface)] hover:border-[var(--color-olive)] hover:bg-[var(--color-olive)]",
   outline:
-    "border-[#F7F1E7]/35 bg-transparent text-[#F7F1E7] hover:border-[#C8A45D] hover:text-[#C8A45D]",
+    "border-[rgb(33_29_22_/_0.28)] bg-transparent text-[var(--color-ink)] hover:border-[var(--color-gold)] hover:text-[var(--color-gold)]",
   ivory:
-    "border-[#F7F1E7] bg-[#F7F1E7] text-[#070605] hover:border-[#C8A45D] hover:bg-[#C8A45D]",
+    "border-[var(--color-surface)] bg-[var(--color-surface)] text-[var(--color-ink)] hover:border-[var(--color-gold)] hover:bg-[var(--color-gold)] hover:text-[var(--color-surface)]",
   quiet:
-    "border-transparent bg-transparent text-[#F7F1E7] hover:text-[#C8A45D]",
+    "border-transparent bg-transparent text-[var(--color-ink)] hover:text-[var(--color-gold)]",
 };
 
 function Button({
@@ -22,7 +22,7 @@ function Button({
   ...props
 }) {
   const classes = cn(
-    "inline-flex min-h-12 items-center justify-center gap-2 border px-6 py-3 text-sm font-medium transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#C8A45D]",
+    "inline-flex min-h-12 items-center justify-center gap-2 border px-6 py-3 text-sm font-medium transition duration-300 ease-out active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-gold)]",
     variants[variant],
     className,
   );

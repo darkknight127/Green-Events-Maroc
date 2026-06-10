@@ -5,7 +5,7 @@ function StickyWhatsAppButton({ brand, content, whatsappMessage }) {
   return (
     <a
       aria-label={content.ariaLabel}
-      className="fixed bottom-4 right-4 z-50 inline-flex items-center gap-2 border border-[#C8A45D] bg-[#C8A45D] px-4 py-3 text-sm font-semibold text-[#070605] shadow-[0_18px_50px_rgba(0,0,0,0.34)] transition-colors duration-300 hover:bg-[#F7F1E7] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F7F1E7] sm:bottom-6 sm:right-6"
+      className="fixed bottom-4 right-4 z-50 inline-flex items-center gap-2 border border-[var(--color-gold)] bg-[var(--color-gold)] px-4 py-3 text-sm font-semibold text-[var(--color-surface)] shadow-[0_4px_8px_rgba(64,45,23,0.18)] transition-colors duration-300 hover:border-[var(--color-olive)] hover:bg-[var(--color-olive)] active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-gold)] sm:bottom-6 sm:right-6"
       href={getWhatsAppHref(brand.whatsapp, whatsappMessage)}
     >
       <MessageCircle aria-hidden="true" size={18} />

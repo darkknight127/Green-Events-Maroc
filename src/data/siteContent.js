@@ -8,14 +8,18 @@ export const languages = [
 export const brand = {
   name: "Green Events Maroc",
   instagram: "https://www.instagram.com/greenevents_maroc/",
-  whatsapp: "",
+  instagramHandle: "@greenevents_maroc",
+  phone: "+212 663 730 183",
+  whatsapp: "+212663730183",
 };
 
 export const productionImages = {
   hero: {
-    desktop: "/images/hero/hero-desktop.webp",
-    mobile: "/images/hero/hero-mobile.webp",
-    video: "",
+    desktop: "/images/hero/hero-wedding-joy-desktop-v2.webp",
+    mobile: "/images/hero/hero-wedding-joy-mobile-v2.webp",
+    originalDesktop: "/images/hero/hero-desktop.webp",
+    originalMobile: "/images/hero/hero-mobile.webp",
+    video: "/videos/hero_section_video.mp4",
   },
   portfolio: {
     weddingTable: "/images/portfolio/wedding-table.webp",
@@ -43,7 +47,7 @@ export const siteContent = {
       "Bonjour Green Events Maroc, je souhaite demander un devis pour un événement.",
     hero: {
       navLabel: "Mariages & événements privés",
-      eyebrow: "Wedding & Private Events · Marrakech",
+      eyebrow: "Mariages & événements privés · Marrakech",
       title: "Créateurs d’expériences sur mesure.",
       subtitle:
         "Traiteur & décorateur événementiel pour mariages, anniversaires et événements privés, pensés avec élégance, du décor à l’art de recevoir.",
@@ -54,19 +58,19 @@ export const siteContent = {
       navigation: [
         { label: "Réalisations", href: "#realisations" },
         { label: "Services", href: "#services" },
-        { label: "Process", href: "#process" },
+        { label: "Méthode", href: "#process" },
         { label: "Contact", href: "#contact" },
       ],
       image: {
         desktopSrc: productionImages.hero.desktop,
         mobileSrc: productionImages.hero.mobile,
-        alt: "Dîner privé à Marrakech avec table élégante, bougies et ambiance de mariage",
+        alt: "Dîner de mariage joyeux à Marrakech avec invités, bougies, fleurs blanches et lanternes",
       },
       videoSrc: productionImages.hero.video,
       highlights: [
         "Mariages sur mesure",
         "Traiteur & décoration",
-        "Private events",
+        "Événements privés",
       ],
     },
     brandPromise: {
@@ -210,6 +214,10 @@ export const siteContent = {
       title: "De la première intention au dernier service.",
       intro:
         "Une préparation calme, précise, pensée pour que le jour de l’événement semble naturellement fluide.",
+      image: {
+        src: productionImages.portfolio.nightAmbiance,
+        alt: "Réception de nuit à Marrakech avec lumières chaudes et ambiance de célébration",
+      },
     },
     process: [
       {
@@ -237,6 +245,68 @@ export const siteContent = {
           "La célébration prend vie avec élégance, rythme et attention discrète.",
       },
     ],
+    whyGreenEvents: {
+      eyebrow: "Pourquoi Green Events",
+      title:
+        "Le goût du beau, la précision du service et la chaleur d’une vraie célébration.",
+      intro:
+        "Un événement réussi ne se limite pas à un décor. Il se ressent dans l’accueil, la table, la lumière, la cuisine et la sérénité de chaque moment.",
+      image: {
+        src: productionImages.portfolio.privateDinner,
+        alt: "Dîner privé chaleureux à Marrakech avec table élégante et invités",
+      },
+      highlights: [
+        {
+          title: "Une vision unique",
+          description:
+            "Décoration, traiteur, fleurs et art de la table avancent dans la même direction.",
+        },
+        {
+          title: "Une présence discrète",
+          description:
+            "L’équipe accompagne le rythme de la journée sans alourdir l’expérience des invités.",
+        },
+        {
+          title: "Un sens du détail",
+          description:
+            "Les matières, les bougies, les assiettes et les saveurs créent une atmosphère cohérente.",
+        },
+        {
+          title: "L’esprit de Marrakech",
+          description:
+            "La lumière, les jardins, les lanternes et l’hospitalité marocaine donnent au moment sa chaleur.",
+        },
+      ],
+    },
+    socialProof: {
+      eyebrow: "Sur Instagram",
+      title: "L’art de recevoir, en images.",
+      intro:
+        "Retrouvez nos tables, nos fleurs, nos détails traiteur et nos ambiances de nuit sur Instagram.",
+      cta: "Voir Instagram",
+      items: [
+        {
+          label: "Tables",
+          image: productionImages.portfolio.weddingTable,
+          alt: "Table de mariage dressée avec fleurs et bougies",
+        },
+        {
+          label: "Détails",
+          image: productionImages.portfolio.cateringDetail,
+          alt: "Détail traiteur raffiné pour réception privée",
+        },
+        {
+          label: "Lumière",
+          image: productionImages.portfolio.nightAmbiance,
+          alt: "Ambiance lumineuse de soirée à Marrakech",
+        },
+        {
+          label: "Fleurs",
+          image: productionImages.portfolio.floralCandles,
+          alt: "Fleurs blanches et bougies sur table de réception",
+        },
+      ],
+    },
     finalCta: {
       eyebrow: "Votre événement",
       title: "Parlons de la célébration que vous imaginez.",
@@ -244,6 +314,26 @@ export const siteContent = {
         "Mariage, anniversaire ou dîner privé: envoyez-nous quelques détails et nous vous répondrons avec une première direction claire.",
       primaryCta: "Écrire sur WhatsApp",
       instagramCta: "Voir Instagram",
+      image: {
+        src: productionImages.hero.mobile,
+        alt: "Célébration de mariage joyeuse à Marrakech autour d’une table aux bougies",
+      },
+    },
+    footer: {
+      description:
+        "Traiteur et décorateur événementiel à Marrakech pour mariages, anniversaires et événements privés pensés sur mesure.",
+      navigationTitle: "Navigation",
+      contactTitle: "Contact",
+      whatsappLabel: "Écrire sur WhatsApp",
+      phoneLabel: "Téléphone",
+      instagramLabel: "Instagram",
+      legal: "Green Events Maroc. Mariages & événements privés à Marrakech.",
+      links: [
+        { label: "Réalisations", href: "#realisations" },
+        { label: "Services", href: "#services" },
+        { label: "Méthode", href: "#process" },
+        { label: "Contact", href: "#contact" },
+      ],
     },
     stickyWhatsApp: {
       label: "Devis WhatsApp",
@@ -321,7 +411,7 @@ export const siteContent = {
       image: {
         desktopSrc: productionImages.hero.desktop,
         mobileSrc: productionImages.hero.mobile,
-        alt: "Private dinner in Marrakesh with an elegant table, candles and wedding atmosphere",
+        alt: "Joyful wedding dinner in Marrakesh with guests, candles, white flowers and lanterns",
       },
       videoSrc: productionImages.hero.video,
       highlights: ["Bespoke weddings", "Catering & styling", "Private events"],
@@ -467,6 +557,10 @@ export const siteContent = {
       title: "From first intention to final service.",
       intro:
         "A calm, precise preparation process designed to make the event day feel naturally fluid.",
+      image: {
+        src: productionImages.portfolio.nightAmbiance,
+        alt: "Night reception in Marrakesh with warm lights and celebration atmosphere",
+      },
     },
     process: [
       {
@@ -494,6 +588,68 @@ export const siteContent = {
           "The celebration comes to life with elegance, rhythm and discreet attention.",
       },
     ],
+    whyGreenEvents: {
+      eyebrow: "Why Green Events",
+      title:
+        "Taste, service precision, and the warmth of a true celebration.",
+      intro:
+        "A successful event is more than styling. It is felt through the welcome, the table, the light, the cuisine and the calm behind every moment.",
+      image: {
+        src: productionImages.portfolio.privateDinner,
+        alt: "Warm private dinner in Marrakesh with elegant table and guests",
+      },
+      highlights: [
+        {
+          title: "One clear vision",
+          description:
+            "Decoration, catering, florals and table styling move in the same direction.",
+        },
+        {
+          title: "A discreet presence",
+          description:
+            "The team supports the pace of the day without weighing down the guest experience.",
+        },
+        {
+          title: "Attention to detail",
+          description:
+            "Materials, candles, plates and flavors create one coherent atmosphere.",
+        },
+        {
+          title: "Marrakesh warmth",
+          description:
+            "Light, gardens, lanterns and Moroccan hospitality give the moment its feeling.",
+        },
+      ],
+    },
+    socialProof: {
+      eyebrow: "On Instagram",
+      title: "Hospitality, seen through the details.",
+      intro:
+        "Discover our tables, florals, catering details and evening atmospheres on Instagram.",
+      cta: "View Instagram",
+      items: [
+        {
+          label: "Tables",
+          image: productionImages.portfolio.weddingTable,
+          alt: "Wedding table set with flowers and candles",
+        },
+        {
+          label: "Details",
+          image: productionImages.portfolio.cateringDetail,
+          alt: "Refined catering detail for a private reception",
+        },
+        {
+          label: "Light",
+          image: productionImages.portfolio.nightAmbiance,
+          alt: "Evening light atmosphere in Marrakesh",
+        },
+        {
+          label: "Flowers",
+          image: productionImages.portfolio.floralCandles,
+          alt: "White flowers and candles on a reception table",
+        },
+      ],
+    },
     finalCta: {
       eyebrow: "Your event",
       title: "Let’s talk about the celebration you have in mind.",
@@ -501,6 +657,26 @@ export const siteContent = {
         "Wedding, birthday or private dinner: send us a few details and we will reply with a clear first direction.",
       primaryCta: "Write on WhatsApp",
       instagramCta: "View Instagram",
+      image: {
+        src: productionImages.hero.mobile,
+        alt: "Joyful wedding celebration in Marrakesh around a candlelit table",
+      },
+    },
+    footer: {
+      description:
+        "Catering and event decoration in Marrakesh for bespoke weddings, birthdays and private events.",
+      navigationTitle: "Navigation",
+      contactTitle: "Contact",
+      whatsappLabel: "Write on WhatsApp",
+      phoneLabel: "Phone",
+      instagramLabel: "Instagram",
+      legal: "Green Events Maroc. Marrakesh Wedding & Private Events.",
+      links: [
+        { label: "Work", href: "#realisations" },
+        { label: "Services", href: "#services" },
+        { label: "Process", href: "#process" },
+        { label: "Contact", href: "#contact" },
+      ],
     },
     stickyWhatsApp: {
       label: "WhatsApp quote",
