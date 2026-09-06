@@ -17,7 +17,7 @@ function SectionHeader({ eyebrow, title, intro, align = "left", className }) {
         </p>
       ) : null}
 
-      <h2 className="font-display text-4xl font-normal leading-tight text-[var(--color-ink)] sm:text-5xl lg:text-6xl">
+      <h2 className="font-display text-[2.25rem] font-normal leading-[1.08] text-[var(--color-ink)] sm:text-[2.75rem] lg:text-[3.25rem]">
         {title}
       </h2>
 

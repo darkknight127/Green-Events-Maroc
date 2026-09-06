@@ -273,7 +273,7 @@ function ScrollStorySection({ content }) {
               <p className="mb-3 text-xs font-medium text-[#C8A45D] text-shadow-soft">
                 {content.progressLabel} {activeStep.number} / {totalLabel}
               </p>
-              <h2 className="font-display text-4xl font-normal leading-none text-[#F7F1E7] text-shadow-soft">
+              <h2 className="font-display text-[2.25rem] font-normal leading-[1.05] text-[#F7F1E7] text-shadow-soft">
                 {content.title}
               </h2>
             </div>
@@ -296,7 +296,7 @@ function ScrollStorySection({ content }) {
                 key={`mobile-${activeStep.number}`}
               >
                 <p className="text-sm text-[#C8A45D]">{activeStep.number}</p>
-                <h3 className="mt-2 font-display text-3xl leading-tight text-[#F7F1E7]">
+                <h3 className="mt-2 font-display text-[1.75rem] leading-tight text-[#F7F1E7]">
                   {activeStep.title}
                 </h3>
                 <p className="mt-4 text-sm leading-6 text-[#F7F1E7]/78">
@@ -323,7 +323,7 @@ function ScrollStorySection({ content }) {
             <p className="mb-4 text-sm font-medium text-[#C8A45D]">
               {content.progressLabel} 01 / {totalLabel}
             </p>
-            <h2 className="font-display text-5xl font-normal leading-none text-[#F7F1E7] sm:text-6xl">
+            <h2 className="font-display text-[2.5rem] font-normal leading-[1.05] text-[#F7F1E7] sm:text-[3.25rem]">
               {content.title}
             </h2>
             <p className="mt-5 text-base leading-8 text-[#D8C3A5] sm:text-lg">
@@ -348,7 +348,7 @@ function ScrollStorySection({ content }) {
                   <p className="text-sm font-medium text-[#C8A45D]">
                     {step.number} / {totalLabel}
                   </p>
-                  <h3 className="mt-2 font-display text-3xl leading-tight text-[#F7F1E7]">
+                  <h3 className="mt-2 font-display text-[1.75rem] leading-tight text-[#F7F1E7]">
                     {step.title}
                   </h3>
                 </div>
@@ -386,7 +386,7 @@ function ScrollStorySection({ content }) {
               <p className="mb-5 text-sm font-medium text-[#C8A45D] text-shadow-soft">
                 {content.progressLabel} {activeStep.number} / {totalLabel}
               </p>
-              <h2 className="font-display text-5xl font-normal leading-none text-[#F7F1E7] text-shadow-soft sm:text-6xl lg:text-8xl">
+              <h2 className="font-display text-[2.5rem] font-normal leading-[1.05] text-[#F7F1E7] text-shadow-soft sm:text-[3.25rem] lg:text-[4.25rem]">
                 {content.title}
               </h2>
               <p className="mt-6 max-w-2xl text-base leading-8 text-[#F7F1E7]/86 text-shadow-soft sm:text-lg">
@@ -412,7 +412,7 @@ function ScrollStorySection({ content }) {
                 key={activeStep.number}
               >
                 <p className="text-sm text-[#C8A45D]">{activeStep.number}</p>
-                <h3 className="mt-2 font-display text-3xl leading-tight text-[#F7F1E7] sm:text-4xl">
+                <h3 className="mt-2 font-display text-[1.75rem] leading-tight text-[#F7F1E7] sm:text-[2rem]">
                   {activeStep.title}
                 </h3>
               </div>

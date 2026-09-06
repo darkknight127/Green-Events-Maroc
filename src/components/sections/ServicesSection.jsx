@@ -1,5 +1,4 @@
 import Container from "../ui/Container";
-import SectionHeader from "../ui/SectionHeader";
 import { useSectionReveal } from "../../lib/useSectionReveal";
 
 function ServicesSection({ header, services }) {
@@ -7,33 +6,42 @@ function ServicesSection({ header, services }) {
 
   return (
     <section
-      className="luxury-section wedding-flow-section relative overflow-hidden py-16 text-[var(--color-ink)] sm:py-24 lg:py-32"
+      className="relative overflow-hidden bg-[var(--color-surface)] py-16 text-[var(--color-ink)] sm:py-20 lg:py-24"
       id="services"
       ref={sectionRef}
     >
-      <div className="luxury-ambient luxury-ambient-right" aria-hidden="true" />
-
       <Container className="relative z-10">
-        <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-start">
-          <SectionHeader
-            className="story-reveal lg:sticky lg:top-24"
-            eyebrow={header.eyebrow}
-            intro={header.intro}
-            title={header.title}
-          />
+        <header className="story-reveal max-w-5xl border-t border-[rgb(33_29_22_/_0.16)] pt-5">
+          <p className="mb-4 text-sm font-medium text-[var(--color-gold)]">
+            {header.eyebrow}
+          </p>
+          <h2 className="max-w-[28ch] font-display text-[2.15rem] font-normal leading-[1.1] sm:text-[2.6rem] lg:text-[3rem]">
+            {header.title}
+          </h2>
+          <p className="mt-4 max-w-4xl text-base leading-7 text-[var(--color-muted)] sm:text-lg sm:leading-8">
+            {header.intro}
+          </p>
+        </header>
 
-          <div className="grid gap-10 sm:gap-12">
-            {services.map((service, index) => (
+        <div className="mt-12 border-b border-[rgb(33_29_22_/_0.14)] sm:mt-14 lg:mt-16">
+          {services.map((service, index) => {
+            const imageOnRight = index % 2 === 0;
+
+            return (
               <article
-                className={`service-editorial-row story-reveal group relative lg:grid lg:grid-cols-[0.9fr_0.62fr] lg:items-center lg:gap-0 ${
-                  index % 2 === 1 ? "lg:[&>figure]:col-start-2" : ""
-                }`}
+                className="story-reveal grid gap-7 border-t border-[rgb(33_29_22_/_0.14)] py-10 sm:gap-9 sm:py-14 lg:grid-cols-12 lg:items-center lg:gap-12 lg:py-20"
                 key={service.title}
               >
-                <figure className="luxury-image-shell image-arch-soft min-h-[22rem] overflow-hidden sm:min-h-[28rem] lg:row-start-1 lg:min-h-[32rem]">
+                <figure
+                  className={`relative aspect-[4/3] overflow-hidden rounded-sm bg-[#e7ddce] lg:col-span-7 lg:row-start-1 lg:aspect-[16/11] ${
+                    imageOnRight
+                      ? "lg:col-start-6"
+                      : "lg:col-start-1"
+                  }`}
+                >
                   <img
                     alt={service.image.alt}
-                    className="h-full min-h-[22rem] w-full object-cover transition-transform duration-700 group-hover:scale-[1.035] sm:min-h-[28rem] lg:min-h-[32rem]"
+                    className="absolute inset-0 h-full w-full object-cover"
                     decoding="async"
                     loading="lazy"
                     src={service.image.src}
@@ -41,34 +49,29 @@ function ServicesSection({ header, services }) {
                 </figure>
 
                 <div
-                  className={`luxury-panel editorial-panel relative z-10 mx-3 -mt-10 p-5 sm:mx-8 sm:-mt-14 sm:p-7 lg:row-start-1 lg:mx-0 lg:mt-0 lg:min-h-[22rem] lg:max-w-md lg:self-center ${
-                    index % 2 === 1
-                      ? "lg:col-start-1 lg:justify-self-end lg:-mr-12"
-                      : "lg:col-start-2 lg:-ml-12"
+                  className={`lg:col-span-5 lg:row-start-1 ${
+                    imageOnRight
+                      ? "lg:col-start-1 lg:pr-8"
+                      : "lg:col-start-8 lg:pl-8"
                   }`}
                 >
-                  <div className="mb-5 flex items-center justify-between gap-4 lg:block">
-                    <span className="font-display text-4xl leading-none text-[var(--color-gold)] lg:hidden">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <p className="text-sm font-medium text-[var(--color-gold)] lg:flex lg:items-center lg:gap-3">
-                      <span className="hidden font-display text-3xl leading-none lg:inline">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                      <span>{service.label}</span>
-                    </p>
-                  </div>
-
-                  <h3 className="font-display text-[2.35rem] leading-[0.98] text-[var(--color-ink)] sm:text-4xl">
+                  <p className="mb-5 flex items-center gap-3 text-sm font-medium text-[var(--color-gold)]">
+                    <span
+                      aria-hidden="true"
+                      className="h-px w-8 bg-[rgb(138_98_31_/_0.55)]"
+                    />
+                    {String(index + 1).padStart(2, "0")}
+                  </p>
+                  <h3 className="max-w-[20ch] font-display text-[2rem] leading-[1.08] sm:text-[2.35rem] lg:text-[2.65rem]">
                     {service.title}
                   </h3>
-                  <p className="mt-4 max-w-xl text-base leading-8 text-[var(--color-muted)]">
+                  <p className="mt-5 max-w-[38rem] text-base leading-8 text-[var(--color-muted)]">
                     {service.description}
                   </p>
                 </div>
               </article>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </Container>
     </section>

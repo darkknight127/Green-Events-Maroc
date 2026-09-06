@@ -35,7 +35,7 @@ function FinalCtaSection({ brand, content, whatsappMessage }) {
               <p className="mb-4 text-sm font-medium text-[#C8A45D]">
                 {content.eyebrow}
               </p>
-              <h2 className="font-display text-[3rem] font-normal leading-[0.92] text-[#F7F1E7] text-shadow-soft sm:text-6xl lg:text-7xl">
+              <h2 className="font-display text-[2.5rem] font-normal leading-[1.02] text-[#F7F1E7] text-shadow-soft sm:text-[3.25rem] lg:text-[4rem]">
                 {content.title}
               </h2>
             </div>

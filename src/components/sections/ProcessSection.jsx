@@ -41,11 +41,11 @@ function ProcessSection({ header, process }) {
                 className="story-reveal grid grid-cols-[4.25rem_1fr] gap-4 border-t border-[rgb(33_29_22_/_0.12)] py-6 first:border-t-0 sm:grid-cols-[6rem_1fr] sm:gap-7 sm:py-8"
                 key={item.step}
               >
-                <span className="font-display text-4xl leading-none text-[var(--color-gold)] sm:text-5xl">
+                <span className="font-display text-[2rem] leading-none text-[var(--color-gold)] sm:text-[2.5rem]">
                   {item.step}
                 </span>
                 <div>
-                  <h3 className="font-display text-[2.15rem] leading-none text-[var(--color-ink)] sm:text-4xl">
+                  <h3 className="font-display text-[1.85rem] leading-[1.05] text-[var(--color-ink)] sm:text-[2.15rem]">
                     {item.title}
                   </h3>
                   <p className="mt-3 max-w-xl text-base leading-8 text-[var(--color-muted)]">

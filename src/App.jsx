@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
 import BrandPromiseSection from "./components/sections/BrandPromiseSection";
 import FinalCtaSection from "./components/sections/FinalCtaSection";
 import FooterSection from "./components/sections/FooterSection";
@@ -10,12 +11,11 @@ import ServicesSection from "./components/sections/ServicesSection";
 import SocialProofSection from "./components/sections/SocialProofSection";
 import StickyWhatsAppButton from "./components/sections/StickyWhatsAppButton";
 import WhyGreenEventsSection from "./components/sections/WhyGreenEventsSection";
+import RouteScrollManager from "./components/ui/RouteScrollManager";
+import TestimonialsPage from "./pages/TestimonialsPage";
 import { brand, defaultLanguage, siteContent } from "./data/siteContent";
 
-function App() {
-  const [language, setLanguage] = useState(defaultLanguage);
-  const content = siteContent[language];
-
+function HomePage({ content, language, onLanguageChange }) {
   return (
     <main
       className="min-h-screen bg-[var(--color-page)] text-[var(--color-ink)]"
@@ -27,7 +27,7 @@ function App() {
         content={content.hero}
         language={language}
         languageLabel={content.languageLabel}
-        onLanguageChange={setLanguage}
+        onLanguageChange={onLanguageChange}
         whatsappMessage={content.whatsappMessage}
       />
       <BrandPromiseSection content={content.brandPromise} />
@@ -56,6 +56,41 @@ function App() {
         whatsappMessage={content.whatsappMessage}
       />
     </main>
+  );
+}
+
+function App() {
+  const [language, setLanguage] = useState(defaultLanguage);
+  const content = siteContent[language];
+
+  return (
+    <>
+      <RouteScrollManager />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <HomePage
+              content={content}
+              language={language}
+              onLanguageChange={setLanguage}
+            />
+          }
+        />
+        <Route
+          path="/testimonials"
+          element={
+            <TestimonialsPage
+              brand={brand}
+              content={content}
+              language={language}
+              onLanguageChange={setLanguage}
+            />
+          }
+        />
+        <Route path="*" element={<Navigate replace to="/" />} />
+      </Routes>
+    </>
   );
 }
 

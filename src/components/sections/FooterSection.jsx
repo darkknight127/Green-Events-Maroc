@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { getWhatsAppHref } from "../../lib/utils";
 import Container from "../ui/Container";
 
@@ -10,12 +11,23 @@ function FooterSection({ brand, content, whatsappMessage }) {
       <Container className="relative z-10">
         <div className="grid gap-10 border-t border-[rgb(33_29_22_/_0.12)] pt-10 lg:grid-cols-[1fr_0.42fr_0.48fr]">
           <div>
-            <a
-              className="font-display text-4xl leading-none text-[var(--color-ink)]"
-              href="#top"
+            <Link
+              aria-label="Green Events Maroc"
+              className="inline-flex items-center gap-1.5 font-brand text-[1.75rem] leading-none text-[var(--color-ink)] min-[360px]:gap-2 min-[360px]:text-[2.25rem] sm:gap-3 sm:text-[3rem]"
+              to="/#top"
             >
-              {brand.name}
-            </a>
+              <img
+                alt=""
+                aria-hidden="true"
+                className="h-7 w-auto shrink-0 min-[360px]:h-9 sm:h-12"
+                decoding="async"
+                height="272"
+                loading="lazy"
+                src={brand.logo}
+                width="421"
+              />
+              <span className="whitespace-nowrap">{brand.name}</span>
+            </Link>
             <p className="mt-5 max-w-xl text-base leading-8 text-[var(--color-muted)]">
               {content.description}
             </p>
@@ -33,12 +45,12 @@ function FooterSection({ brand, content, whatsappMessage }) {
             <ul className="mt-5 grid gap-3">
               {content.links.map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     className="text-sm text-[rgb(33_29_22_/_0.72)] transition-colors duration-300 hover:text-[var(--color-gold)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-gold)]"
-                    href={link.href}
+                    to={link.href}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

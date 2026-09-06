@@ -31,7 +31,7 @@ function WhyGreenEventsSection({ content }) {
               <p className="mb-4 text-sm font-medium text-[var(--color-gold)]">
                 {content.eyebrow}
               </p>
-              <h2 className="font-display text-[2.7rem] font-normal leading-[0.98] text-[var(--color-ink)] sm:text-5xl lg:text-6xl">
+              <h2 className="font-display text-[2.25rem] font-normal leading-[1.08] text-[var(--color-ink)] sm:text-[2.75rem] lg:text-[3.25rem]">
                 {content.title}
               </h2>
               <p className="mt-6 max-w-xl text-base leading-8 text-[var(--color-muted)] sm:text-lg">
@@ -45,7 +45,7 @@ function WhyGreenEventsSection({ content }) {
                   className="story-reveal border-t border-[rgb(33_29_22_/_0.14)] pt-5"
                   key={item.title}
                 >
-                  <h3 className="font-display text-3xl leading-none text-[var(--color-ink)]">
+                  <h3 className="font-display text-[1.75rem] leading-[1.08] text-[var(--color-ink)]">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-sm leading-7 text-[var(--color-muted)]">

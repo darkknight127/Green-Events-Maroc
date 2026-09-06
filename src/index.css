@@ -2,11 +2,12 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/geist";
+@import "@fontsource/parisienne";
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  font-family: "Avenir Next", Avenir, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Geist Variable", "Helvetica Neue", Arial, sans-serif;
   color: #211d16;
   background: #fbf8f1;
   color-scheme: light;
@@ -15,8 +16,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  --font-body: "Avenir Next", Avenir, "Helvetica Neue", Arial, sans-serif;
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-brand: "Parisienne", cursive;
+  --font-body: "Geist Variable", "Helvetica Neue", Arial, sans-serif;
   --color-black: #211d16;
   --color-ink: #211d16;
   --color-muted: #6f6352;
@@ -68,7 +70,7 @@ html {
 
 body {
   margin: 0;
-  min-width: 320px;
+  min-width: 0;
   min-height: 100vh;
   background: var(--color-page);
   font-family: var(--font-body);
@@ -92,6 +94,10 @@ p {
 
 .font-display {
   font-family: var(--font-display);
+}
+
+.font-brand {
+  font-family: var(--font-brand);
 }
 
 .liquid-glass {
