@@ -1,3 +1,4 @@
+import OptimizedImage from "../ui/OptimizedImage";
 import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -135,11 +136,8 @@ function ScrollStorySection({ content }) {
           const images = gsap.utils.toArray(
             section.querySelectorAll(".scroll-story-desktop-image"),
           );
-          const progressFill = section.querySelector(
-            ".scroll-story-desktop-progress-fill",
-          );
 
-          if (images.length < 2 || !progressFill) {
+          if (images.length < 2) {
             return undefined;
           }
 
@@ -149,10 +147,6 @@ function ScrollStorySection({ content }) {
             transformOrigin: "center center",
           });
           gsap.set(images[0], { autoAlpha: 1, scale: 1.02 });
-          gsap.set(progressFill, {
-            scaleX: 0,
-            transformOrigin: "left center",
-          });
           setStep(0);
 
           const refreshOnImageLoad = () => ScrollTrigger.refresh();
@@ -182,7 +176,6 @@ function ScrollStorySection({ content }) {
                   Math.floor(self.progress * total),
                 );
 
-                gsap.set(progressFill, { scaleX: self.progress });
                 setStep(nextIndex);
               },
             },
@@ -252,14 +245,14 @@ function ScrollStorySection({ content }) {
       >
         <div className="sticky top-0 h-svh overflow-hidden">
           <div className="absolute inset-0">
-            {steps.map((step, index) => (
-              <img
+            {steps.map((step) => (
+              <OptimizedImage
                 alt=""
                 aria-hidden="true"
                 className="scroll-story-mobile-image absolute inset-0 h-full w-full object-cover opacity-0"
                 decoding="async"
                 key={step.number}
-                loading={index === 0 ? "eager" : "lazy"}
+                loading="lazy"
                 src={step.image.src}
               />
             ))}
@@ -273,7 +266,7 @@ function ScrollStorySection({ content }) {
               <p className="mb-3 text-xs font-medium text-[#C8A45D] text-shadow-soft">
                 {content.progressLabel} {activeStep.number} / {totalLabel}
               </p>
-              <h2 className="font-display text-4xl font-normal leading-none text-[#F7F1E7] text-shadow-soft">
+              <h2 className="font-display text-[2.25rem] font-normal leading-[1.05] text-[#F7F1E7] text-shadow-soft">
                 {content.title}
               </h2>
             </div>
@@ -296,10 +289,10 @@ function ScrollStorySection({ content }) {
                 key={`mobile-${activeStep.number}`}
               >
                 <p className="text-sm text-[#C8A45D]">{activeStep.number}</p>
-                <h3 className="mt-2 font-display text-3xl leading-tight text-[#F7F1E7]">
+                <h3 className="mt-2 font-display text-[1.75rem] leading-tight text-[#F7F1E7]">
                   {activeStep.title}
                 </h3>
-                <p className="mt-4 text-sm leading-6 text-[#F7F1E7]/78">
+                <p className="font-copy mt-4 text-base leading-6 text-[#F7F1E7]/78">
                   {content.subtitle}
                 </p>
               </div>
@@ -323,32 +316,32 @@ function ScrollStorySection({ content }) {
             <p className="mb-4 text-sm font-medium text-[#C8A45D]">
               {content.progressLabel} 01 / {totalLabel}
             </p>
-            <h2 className="font-display text-5xl font-normal leading-none text-[#F7F1E7] sm:text-6xl">
+            <h2 className="font-display text-[2.5rem] font-normal leading-[1.05] text-[#F7F1E7] sm:text-[3.25rem]">
               {content.title}
             </h2>
-            <p className="mt-5 text-base leading-8 text-[#D8C3A5] sm:text-lg">
+            <p className="font-copy mt-5 text-lg leading-8 text-[#D8C3A5] sm:text-xl">
               {content.subtitle}
             </p>
           </div>
 
           <div className="grid gap-5">
-            {steps.map((step, index) => (
+            {steps.map((step) => (
               <article
                 className="overflow-hidden border border-[#F7F1E7]/12 bg-[#15110D]"
                 key={step.number}
               >
-                <img
+                <OptimizedImage
                   alt={step.image.alt}
                   className="aspect-[4/5] w-full object-cover sm:aspect-[16/10]"
                   decoding="async"
-                  loading={index === 0 ? "eager" : "lazy"}
+                  loading="lazy"
                   src={step.image.src}
                 />
                 <div className="liquid-glass scroll-story-reduced-panel m-3 p-5">
                   <p className="text-sm font-medium text-[#C8A45D]">
                     {step.number} / {totalLabel}
                   </p>
-                  <h3 className="mt-2 font-display text-3xl leading-tight text-[#F7F1E7]">
+                  <h3 className="mt-2 font-display text-[1.75rem] leading-tight text-[#F7F1E7]">
                     {step.title}
                   </h3>
                 </div>
@@ -364,14 +357,14 @@ function ScrollStorySection({ content }) {
         ref={desktopRef}
       >
         <div className="absolute inset-0">
-          {steps.map((step, index) => (
-            <img
+          {steps.map((step) => (
+            <OptimizedImage
               alt=""
               aria-hidden="true"
               className="scroll-story-desktop-image absolute inset-0 h-full w-full object-cover opacity-0"
               decoding="async"
               key={step.number}
-              loading={index === 0 ? "eager" : "lazy"}
+              loading="lazy"
               src={step.image.src}
             />
           ))}
@@ -381,61 +374,41 @@ function ScrollStorySection({ content }) {
         <div className="hero-bottom-blur absolute inset-x-0 bottom-0 h-[54svh] opacity-90" />
 
         <Container className="relative z-10 flex min-h-svh items-end pb-10 pt-20 lg:pb-14">
-          <div className="grid w-full gap-8 lg:grid-cols-[1fr_0.54fr] lg:items-end">
-            <div className="max-w-3xl pb-2">
-              <p className="mb-5 text-sm font-medium text-[#C8A45D] text-shadow-soft">
-                {content.progressLabel} {activeStep.number} / {totalLabel}
-              </p>
-              <h2 className="font-display text-5xl font-normal leading-none text-[#F7F1E7] text-shadow-soft sm:text-6xl lg:text-8xl">
+          <div className="scroll-story-editorial w-full">
+            <div className="max-w-3xl">
+              <h2 className="font-display text-[2.5rem] font-normal leading-[1.05] text-[#F7F1E7] text-shadow-soft sm:text-[3.25rem] lg:text-[4.25rem]">
                 {content.title}
               </h2>
-              <p className="mt-6 max-w-2xl text-base leading-8 text-[#F7F1E7]/86 text-shadow-soft sm:text-lg">
+              <p className="font-copy mt-6 max-w-2xl text-lg leading-8 text-[#F7F1E7]/86 text-shadow-soft sm:text-xl">
                 {content.subtitle}
               </p>
             </div>
 
-            <aside className="liquid-glass scroll-story-panel p-5 text-[#F7F1E7] sm:p-6">
-              <div className="flex items-center justify-between gap-5 text-sm text-[#D8C3A5]">
-                <span>{content.progressLabel}</span>
-                <span>
-                  {activeStep.number} / {totalLabel}
-                </span>
-              </div>
-
-              <div className="mt-4 h-px overflow-hidden bg-[#F7F1E7]/18">
-                <span className="scroll-story-desktop-progress-fill block h-px w-full origin-left scale-x-0 bg-[#C8A45D]" />
-              </div>
-
+            <aside className="scroll-story-current text-[#F7F1E7]">
               <div
                 aria-live="polite"
-                className="scroll-story-copy animate-blur-fade-up mt-6"
+                className="scroll-story-copy animate-blur-fade-up"
                 key={activeStep.number}
               >
-                <p className="text-sm text-[#C8A45D]">{activeStep.number}</p>
-                <h3 className="mt-2 font-display text-3xl leading-tight text-[#F7F1E7] sm:text-4xl">
+                <p className="text-sm text-[#D8C3A5]">
+                  {content.progressLabel} {activeStep.number} / {totalLabel}
+                </p>
+                <h3 className="mt-3 font-display text-[1.75rem] leading-tight text-[#F7F1E7] sm:text-[2rem]">
                   {activeStep.title}
                 </h3>
               </div>
 
-              <ol className="mt-7 grid gap-2">
+              <ol className="scroll-story-index mt-7 flex gap-2" aria-label={content.progressLabel}>
                 {steps.map((step, index) => (
                   <li
-                    className={`flex items-center gap-3 text-sm transition-colors duration-500 ${
+                    className={`h-px flex-1 transition-colors duration-500 ${
                       index === activeIndex
-                        ? "text-[#F7F1E7]"
-                        : "text-[#F7F1E7]/45"
+                        ? "bg-[#C8A45D]"
+                        : "bg-[#F7F1E7]/30"
                     }`}
                     key={step.number}
                   >
-                    <span
-                      className={`h-px w-8 transition-colors duration-500 ${
-                        index === activeIndex
-                          ? "bg-[#C8A45D]"
-                          : "bg-[#F7F1E7]/22"
-                      }`}
-                    />
-                    <span>{step.number}</span>
-                    <span>{step.title}</span>
+                    <span className="sr-only">{step.title}</span>
                   </li>
                 ))}
               </ol>

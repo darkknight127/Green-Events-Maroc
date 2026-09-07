@@ -235,14 +235,14 @@ export function AnimatedTestimonials({
       </div>
 
       <aside className="portfolio-active-copy mx-auto w-full max-w-[35rem] lg:mx-0 lg:pt-6">
-        <h3 className="max-w-[13ch] font-display text-[2.6rem] font-normal leading-[1.02] text-[var(--color-ink)] sm:text-5xl lg:text-[3.7rem]">
+        <h3 className="max-w-[16ch] font-display text-[2rem] font-normal leading-[1.08] text-[var(--color-ink)] sm:text-[2.5rem] lg:text-[2.85rem]">
           {activeItem.name}
         </h3>
         <p className="mt-3 text-base font-medium leading-7 text-[var(--color-gold)] sm:text-lg">
           {activeItem.designation}
         </p>
 
-        <blockquote className="mt-10 max-w-[33rem] text-[1.35rem] font-normal leading-[1.6] text-[var(--color-muted)] sm:text-[1.65rem] sm:leading-[1.58] lg:mt-14 lg:text-[1.82rem]">
+        <blockquote className="mt-8 max-w-[38rem] text-[1.125rem] font-normal leading-[1.65] text-[var(--color-muted)] sm:text-[1.25rem] lg:mt-12 lg:text-[1.35rem]">
           {activeWords.map((word, index) => (
             <span className="portfolio-word inline-block" key={`${word}-${index}`}>
               {word}
