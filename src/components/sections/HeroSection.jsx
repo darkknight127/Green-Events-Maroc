@@ -54,27 +54,27 @@ function HeroSection({
         <div className="absolute inset-0 bg-[#070605]/14" />
         <div className="hero-bottom-blur absolute inset-x-0 bottom-0 h-[52vh]" />
 
-        <Container className="relative z-10 flex h-full flex-col justify-end pb-24 pt-28 sm:pb-10 lg:pb-14">
-          <div className="max-w-4xl">
-            <p className="animate-blur-fade-up mb-5 text-sm font-semibold uppercase tracking-[0.04em] text-[#F7F1E7] text-shadow-soft [animation-delay:220ms]">
+        <Container className="relative z-10 flex h-full flex-col justify-end pb-20 pt-28 sm:pb-10 lg:pb-14 [@media(max-width:639px)_and_(max-height:700px)]:pb-14">
+          <div className="mr-auto w-[88%] max-w-[20rem] text-left sm:w-auto sm:max-w-4xl">
+            <p className="animate-blur-fade-up mb-3 text-[0.65rem] font-semibold uppercase leading-4 tracking-[0.04em] text-[#F7F1E7] text-shadow-soft [animation-delay:220ms] sm:mb-5 sm:text-sm sm:leading-normal">
               {content.eyebrow}
             </p>
 
-            <h1 className="animate-blur-fade-up max-w-4xl font-display text-[2.65rem] font-normal leading-[1] text-[#F7F1E7] text-shadow-soft [animation-delay:360ms] sm:text-[3.75rem] lg:text-[4.75rem]">
+            <h1 className="animate-blur-fade-up max-w-4xl font-display text-[2rem] font-normal leading-[0.98] text-[#F7F1E7] text-shadow-soft [animation-delay:360ms] min-[400px]:text-[2.25rem] sm:text-[3.75rem] lg:text-[4.75rem]">
               {content.title}
             </h1>
 
-            <p className="font-copy animate-blur-fade-up mt-6 max-w-2xl text-lg leading-8 text-[#F7F1E7]/88 text-shadow-soft [animation-delay:520ms] sm:text-xl">
+            <p className="font-copy animate-blur-fade-up mt-3 max-w-[18rem] text-[0.95rem] leading-6 text-[#F7F1E7]/92 text-shadow-soft [animation-delay:520ms] sm:mt-6 sm:max-w-2xl sm:text-xl sm:leading-8">
               {content.subtitle}
             </p>
 
-            <div className="animate-blur-fade-up mt-8 flex flex-col gap-3 sm:flex-row [animation-delay:680ms]">
-              <Button className="w-full sm:w-auto" href={whatsappHref}>
+            <div className="animate-blur-fade-up mt-5 flex flex-col items-start gap-2.5 sm:mt-8 sm:flex-row sm:items-stretch sm:gap-3 [animation-delay:680ms]">
+              <Button className="min-h-11 w-fit max-w-full px-4 py-2.5 text-xs sm:min-h-12 sm:w-auto sm:px-6 sm:py-3 sm:text-sm" href={whatsappHref}>
                 {content.primaryCta}
                 <ArrowUpRight aria-hidden="true" size={17} />
               </Button>
               <Button
-                className="liquid-glass w-full border-[#F7F1E7]/24 bg-transparent text-black hover:border-[#C8A45D] hover:text-[#C8A45D] sm:w-auto"
+                className="liquid-glass min-h-11 w-fit max-w-full border-[#F7F1E7]/24 bg-transparent px-4 py-2.5 text-xs text-black hover:border-[#C8A45D] hover:text-[#C8A45D] sm:min-h-12 sm:w-auto sm:px-6 sm:py-3 sm:text-sm"
                 href="#realisations"
                 variant="outline"
               >
@@ -84,7 +84,7 @@ function HeroSection({
 
             <ul
               aria-label={content.highlightsLabel}
-              className="animate-blur-fade-up mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 [animation-delay:840ms]"
+              className="animate-blur-fade-up mt-4 flex flex-wrap items-center justify-start gap-x-3 gap-y-1.5 [animation-delay:840ms] sm:mt-6 sm:gap-x-5 sm:gap-y-2 [@media(max-width:639px)_and_(max-height:700px)]:hidden"
             >
               {content.highlights.map((item) => (
                 <li
