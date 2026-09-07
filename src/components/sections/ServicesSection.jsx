@@ -1,3 +1,4 @@
+import OptimizedImage from "../ui/OptimizedImage";
 import Container from "../ui/Container";
 import { useSectionReveal } from "../../lib/useSectionReveal";
 
@@ -18,7 +19,7 @@ function ServicesSection({ header, services }) {
           <h2 className="max-w-[28ch] font-display text-[2.15rem] font-normal leading-[1.1] sm:text-[2.6rem] lg:text-[3rem]">
             {header.title}
           </h2>
-          <p className="mt-4 max-w-4xl text-base leading-7 text-[var(--color-muted)] sm:text-lg sm:leading-8">
+          <p className="font-copy mt-4 max-w-4xl text-lg leading-7 text-[var(--color-muted)] sm:text-xl sm:leading-8">
             {header.intro}
           </p>
         </header>
@@ -39,7 +40,7 @@ function ServicesSection({ header, services }) {
                       : "lg:col-start-1"
                   }`}
                 >
-                  <img
+                  <OptimizedImage
                     alt={service.image.alt}
                     className="absolute inset-0 h-full w-full object-cover"
                     decoding="async"
@@ -65,7 +66,7 @@ function ServicesSection({ header, services }) {
                   <h3 className="max-w-[20ch] font-display text-[2rem] leading-[1.08] sm:text-[2.35rem] lg:text-[2.65rem]">
                     {service.title}
                   </h3>
-                  <p className="mt-5 max-w-[38rem] text-base leading-8 text-[var(--color-muted)]">
+                  <p className="font-copy mt-5 max-w-[38rem] text-lg leading-8 text-[var(--color-muted)] sm:text-xl">
                     {service.description}
                   </p>
                 </div>

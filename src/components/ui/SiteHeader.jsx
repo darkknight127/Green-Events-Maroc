@@ -65,10 +65,10 @@ function SiteHeader({
               <img
                 alt=""
                 aria-hidden="true"
-                className={`w-auto shrink-0 transition-[height,filter] duration-500 ${
+                className={`header-brand-mark w-auto shrink-0 transition-[height,filter] duration-500 ${
                   isNavCompact
-                    ? "h-5 min-[360px]:h-6 min-[400px]:h-7"
-                    : "h-5 brightness-0 invert min-[360px]:h-7 min-[400px]:h-8"
+                    ? "h-7 min-[360px]:h-8 min-[400px]:h-9"
+                    : "header-brand-mark-light h-8 min-[360px]:h-9 min-[400px]:h-10"
                 }`}
                 decoding="async"
                 height="272"

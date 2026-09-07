@@ -12,6 +12,7 @@ import SocialProofSection from "./components/sections/SocialProofSection";
 import StickyWhatsAppButton from "./components/sections/StickyWhatsAppButton";
 import WhyGreenEventsSection from "./components/sections/WhyGreenEventsSection";
 import RouteScrollManager from "./components/ui/RouteScrollManager";
+import SiteMetadata from "./components/ui/SiteMetadata";
 import TestimonialsPage from "./pages/TestimonialsPage";
 import { brand, defaultLanguage, siteContent } from "./data/siteContent";
 
@@ -66,6 +67,7 @@ function App() {
   return (
     <>
       <RouteScrollManager />
+      <SiteMetadata language={language} />
       <Routes>
         <Route
           path="/"

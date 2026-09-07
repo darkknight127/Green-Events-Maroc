@@ -56,7 +56,7 @@ function HeroSection({
 
         <Container className="relative z-10 flex h-full flex-col justify-end pb-24 pt-28 sm:pb-10 lg:pb-14">
           <div className="max-w-4xl">
-            <p className="animate-blur-fade-up mb-5 text-sm font-medium uppercase text-[#C8A45D] text-shadow-soft [animation-delay:220ms]">
+            <p className="animate-blur-fade-up mb-5 text-sm font-semibold uppercase tracking-[0.04em] text-[#F7F1E7] text-shadow-soft [animation-delay:220ms]">
               {content.eyebrow}
             </p>
 
@@ -64,7 +64,7 @@ function HeroSection({
               {content.title}
             </h1>
 
-            <p className="animate-blur-fade-up mt-6 max-w-2xl text-base leading-8 text-[#F7F1E7]/88 text-shadow-soft [animation-delay:520ms] sm:text-lg">
+            <p className="font-copy animate-blur-fade-up mt-6 max-w-2xl text-lg leading-8 text-[#F7F1E7]/88 text-shadow-soft [animation-delay:520ms] sm:text-xl">
               {content.subtitle}
             </p>
 

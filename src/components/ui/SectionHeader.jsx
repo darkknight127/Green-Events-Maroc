@@ -22,7 +22,7 @@ function SectionHeader({ eyebrow, title, intro, align = "left", className }) {
       </h2>
 
       {intro ? (
-        <p className="mt-5 max-w-2xl text-base leading-8 text-[var(--color-muted)] sm:text-lg">
+        <p className="font-copy mt-5 max-w-2xl text-lg leading-8 text-[var(--color-muted)] sm:text-xl">
           {intro}
         </p>
       ) : null}

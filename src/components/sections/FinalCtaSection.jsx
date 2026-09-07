@@ -1,3 +1,4 @@
+import OptimizedImage from "../ui/OptimizedImage";
 import { ArrowUpRight, ExternalLink } from "lucide-react";
 import { getWhatsAppHref } from "../../lib/utils";
 import Button from "../ui/Button";
@@ -10,16 +11,14 @@ function FinalCtaSection({ brand, content, whatsappMessage }) {
 
   return (
     <section
-      className="luxury-section wedding-flow-section relative overflow-hidden pb-24 pt-16 text-[#F7F1E7] sm:pb-28 sm:pt-24 lg:pb-36 lg:pt-32"
+      className="relative overflow-hidden bg-[var(--color-surface)] py-14 text-[#F7F1E7] sm:py-20 lg:py-24"
       id="contact"
       ref={sectionRef}
     >
-      <div className="luxury-ambient luxury-ambient-center" aria-hidden="true" />
-
       <Container className="relative z-10">
         <div className="story-reveal relative overflow-hidden rounded-[1rem] border border-[#F7F1E7]/14 bg-[#0A0806]">
           {content.image ? (
-            <img
+            <OptimizedImage
               alt={content.image.alt}
               className="absolute inset-0 h-full w-full object-cover opacity-[0.54]"
               decoding="async"
@@ -41,7 +40,7 @@ function FinalCtaSection({ brand, content, whatsappMessage }) {
             </div>
 
             <div className="story-reveal lg:justify-self-end">
-              <p className="max-w-xl text-base leading-8 text-[#F7F1E7]/86 text-shadow-soft sm:text-lg">
+              <p className="font-copy max-w-xl text-lg leading-8 text-[#F7F1E7]/86 text-shadow-soft sm:text-xl">
                 {content.intro}
               </p>
 
